@@ -1,0 +1,71 @@
+.top-banner {
+    background-image: url('home-top.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1000px;
+
+    display: grid;
+    grid-template-columns: 1fr minmax(240px, 4fr) 3fr minmax(100px, 1fr) 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+
+}
+
+.top-banner-splash {
+    grid-column-start: 2;
+    grid-row-start: 2;  
+    align-self: center;
+}
+
+.top-banner-splash-text {
+    font-size:80px; 
+    color:white;
+    padding: 0px;
+    margin-bottom: 0px;
+
+}
+
+.top-banner-splash-text-underlay {
+    color:white;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.logo {
+    grid-column-start: 2;
+}
+
+.menu {
+    grid-column-start: 4;
+    place-self: center;
+}
+
+/* VIDEO SECTION */
+.featured-banner {
+    background-color:burlywood; 
+    background-repeat: no-repeat;  
+    background-size: cover; 
+    padding: 20px;
+
+    display: grid;
+    /*grid-template-columns: 1fr 4fr 4fr 1fr;*/
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(autofit, minmax(240px, 1fr));
+}
+
+.featured-banner-splash {
+
+}
+
+.featured-banner-splash-text {
+    font-size:60px; 
+    color:rgb(71, 55, 55);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.featured-banner-videos {
+
+}
+
