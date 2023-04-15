@@ -9,6 +9,8 @@
     grid-template-columns: 1fr minmax(240px, 4fr) 3fr minmax(100px, 1fr) 1fr;
     grid-template-rows: 1fr 8fr 1fr;
 
+    z-index: 2;
+
 }
 
 .top-banner-splash {
@@ -38,6 +40,23 @@
 .menu {
     grid-column-start: 4;
     place-self: center;
+}
+
+.menu-overlay {
+    z-index: 1;
+    position: fixed;
+    background-color: azure;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-item {
+    color:black;
+}
+
+.menu-item:hover {
+    color: grey;
 }
 
 /* VIDEO SECTION */

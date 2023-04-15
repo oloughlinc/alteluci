@@ -1,6 +1,18 @@
+<section *ngIf="showMenu" [@menuAnimation] class="menu-overlay">
+    <H1>HEELO I AM MENU</H1>
+    <p (click)="showMenu=!showMenu">BACK</p>
+    <ul>
+        <li class="menu-item"><h1>HOME</h1></li>
+        <li class="menu-item"><h1>ABOOT</h1></li>
+        <li class="menu-item"><h1>CONTACT</h1></li>
+        <li class="menu-item"><h1>MORE</h1></li>
+    </ul>
+</section>
+
+<!-- HERO SECTION -->
 <section class="top-banner">
     <h1 class="logo">A L T E L U C I</h1>
-    <section class="menu">MENU</section>
+    <section class="menu"><button style="background: none; border: none;" (click)="showMenu=!showMenu">MENU</button></section>
     <section class="top-banner-splash">
         <p class="top-banner-splash-text"><b>DEEANDRA<br>& SAMUEL</b></p>
         <p class="top-banner-splash-text-underlay">L O S   A N G E L E S , U S A</p>
