@@ -1,3 +1,19 @@
+.background-leaf {
+   
+    background-image: url('leaves.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: fixed;
+
+    z-index: -999;
+    height: 1000px;
+    width: 100%
+
+}
+
+
 .top-banner {
     background-image: url('home-top.jpg');
     background-size: cover;
@@ -25,6 +41,11 @@
     padding: 0px;
     margin-bottom: 0px;
 
+}
+@media screen and (max-width: 800px) { 
+    .top-banner-splash-text {
+        font-size: 60px;
+    }
 }
 
 .top-banner-splash-text-underlay {
@@ -61,7 +82,8 @@
 
 /* VIDEO SECTION */
 .featured-banner {
-    background-color:burlywood; 
+    /*background-color:burlywood;*/
+    background-color: rgba(222, 184, 135, 0.8);
     background-repeat: no-repeat;  
     background-size: cover; 
     padding: 20px;
@@ -71,6 +93,7 @@
     align-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(autofit, minmax(240px, 1fr));
+
 }
 
 .featured-banner-splash {
@@ -82,6 +105,28 @@
     color:rgb(71, 55, 55);
     padding: 0px;
     margin-bottom: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+    .featured-banner-splash-text {
+        font-size: 40px;
+    }
+    .featured-banner {
+        grid-template-columns: 1fr;
+    }
+    #vid1 {
+        width: 300px;
+        height: 200px;
+    }
+    #vid2 {
+        width: 300px;
+        height: 200px;
+    }
+    #vid3 {
+        width: 300px;
+        height: 200px;
+    }
+    
 }
 
 .featured-banner-videos {
