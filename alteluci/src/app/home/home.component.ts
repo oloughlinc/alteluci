@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 //animation imports
 import { trigger, state, style, animate, transition } from '@angular/animations';
@@ -31,9 +32,31 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   
 
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
   showMenu = false;
+
+  formData!: FormGroup;
+
+  deets: String = "SPILL THE DEETS. WHAT ARE YOU IN TO? HOBBIES? FOOD? MUSIC?\nWHAT MAKES YOUR HEART BEAT FASTER?";
+
+  constructor(
+    private builder: FormBuilder,
+  ) {}
+
+  ngOnInit() {
+    this.formData = this.builder.group({
+      Name: new FormControl('', Validators.required),
+      Email: new FormControl('', [Validators.required, Validators.email]),
+      Phone: new FormControl('', [Validators.required, Validators.pattern('^(1-)?\d{3}-\d{3}-\d{4}$')]),
+      Date: new FormControl('', Validators.required),
+      About: new FormControl('', Validators.required),
+    })
+  }
+
+  public onSubmit(formData: FormData) {
+    //pass
+  }
 
   public toggleMenu(){
     this.showMenu = !this.showMenu;

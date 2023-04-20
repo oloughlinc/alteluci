@@ -68,10 +68,46 @@
 </div>
 
 <!--Contact Meh-->
-<div style="background-color:burlywood; height:1000px; background-repeat: no-repeat;  background-position: center; background-size: cover; padding: 20px; background-image: url('https://media.tenor.com/SnDjP-aWBAkAAAAd/intergalactic-intergalactic-quality.gif');" >
+<div style="background-color:rgb(223, 202, 176); height:1000px; background-repeat: no-repeat;  background-position: center; background-size: cover; padding: 20px;" >
     <style>
 
     </style>
 <H1 style="text-align: right;">CONTACT</H1>
-<H1 style="text-align: right; font-size: 60px;">THIS IS A BACKGROUND GIF</H1>
+
+<form [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
+
+    <div>
+
+        <input class="form-field" type="text" name="Name" placeholder="NAME & PARTNERS NAME" formControlName="Name">
+    </div>
+
+    <div>
+
+        <input class="form-field" type="email" name="Email" placeholder="EMAIL" formControlName="Email">
+    </div>
+
+    <div>
+
+        <input class="form-field" type="tel" name="Phone" placeholder="xxx-xxx-xxxx" formControlName="Phone">
+    </div>
+
+    <div>
+
+        <input class="form-field" type="date" name="Date" placeholder="EVENT DATE" formControlName="Date">
+    </div>
+
+    <div>
+        <div style="padding-top: 15px;"><label class="who-are-you" for="About"><i>WHO ARE YOU?</i></label></div>
+        <textarea class="form-field-textarea" type="textarea" name="About" placeholder="{{deets}}" formControlName="Name"></textarea>
+    </div>
+
+    <div>
+        <button class="button-6" type="submit">SEND</button>
+    </div>
+
+</form>
+
+
+
+
 </div>
