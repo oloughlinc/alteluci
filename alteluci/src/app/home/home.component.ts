@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
     this.formData = this.builder.group({
       Name: new FormControl('', Validators.required),
       Email: new FormControl('', [Validators.required, Validators.email]),
-      Phone: new FormControl('', [Validators.required, Validators.pattern('^(1-)?\d{3}-\d{3}-\d{4}$')]),
+      Phone: new FormControl(''),
       Date: new FormControl('', Validators.required),
       About: new FormControl('', Validators.required),
     })

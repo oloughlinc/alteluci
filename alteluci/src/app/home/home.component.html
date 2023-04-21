@@ -10,7 +10,6 @@
 </section>
 
 <section class="background-leaf">
-    <H1>THIS IS ME. LOOKOUT CUZ HERE I COME</H1>
 </section>
 
 <!-- HERO SECTION -->
@@ -19,7 +18,7 @@
     <section class="menu"><button style="background: none; border: none;" (click)="showMenu=!showMenu">MENU</button></section>
     <section class="top-banner-splash">
         <p class="top-banner-splash-text"><b>DEEANDRA<br>& SAMUEL</b></p>
-        <p class="top-banner-splash-text-underlay">L O S   A N G E L E S , U S A</p>
+        <p class="top-banner-splash-text-underlay" style="letter-spacing: 15px;">LOS ANGELES, USA</p>
     </section>
 
 </section>
@@ -49,7 +48,7 @@
 
 
 <!-- HONEY HONEY BAB-->
-<div style="background-color:rgb(85, 59, 42); height:1000px; background-repeat: no-repeat;  background-size: cover; padding: 20px;">
+<div style="background-color:rgb(85, 59, 42); height:1000px; background-repeat: no-repeat;  background-size: cover; padding: 20px; opacity: 0.98;">
     <style>
 
     </style>
@@ -60,7 +59,7 @@
 <H1 style="text-align: right; color: white;">DOCUMENTARY STYLE FILMMAKING.</H1>
 <H1 style="text-align: right; color: white;">HONEST NOSTALGIC CAPTURE.</H1>
 
-<img id="vid1" src="home-top.jpg" height="360" width="640" style="margin-left: auto; margin-right: auto; display: block;">
+<img id="vid1" src="../../assets/images/beach.png" height="360" width="640" style="margin-left: auto; margin-right: auto; display: block;">
 <br>
 <br>
 <h1 style="text-align: center; color: white; margin-bottom: 0; padding-bottom: 0; font-size: 60px;">HONEY HONEY</h1>
@@ -68,44 +67,50 @@
 </div>
 
 <!--Contact Meh-->
-<div style="background-color:rgb(223, 202, 176); height:1000px; background-repeat: no-repeat;  background-position: center; background-size: cover; padding: 20px;" >
-    <style>
+<div class="contact-segment" >
 
-    </style>
-<H1 style="text-align: right;">CONTACT</H1>
-
-<form [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
-
-    <div>
-
-        <input class="form-field" type="text" name="Name" placeholder="NAME & PARTNERS NAME" formControlName="Name">
+    <div class="contact-label">
+        <img src="https://pngfile.net/public/uploads/preview/brown-acrylic-paint-brush-stroke-png-11671358985tximtbpmkg.png" width="200px" height="200px"><br>
+        <H1 class="contact-label">CONTACT /<br>CONTATTAMI</H1>
     </div>
 
-    <div>
+    <form class="contact-form" [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
 
-        <input class="form-field" type="email" name="Email" placeholder="EMAIL" formControlName="Email">
+        <div>
+
+            <input class="form-field" type="text" name="Name" placeholder="NAME & PARTNERS NAME" formControlName="Name">
+        </div>
+
+        <div>
+
+            <input class="form-field" type="email" name="Email" placeholder="EMAIL" formControlName="Email">
+        </div>
+
+        <div>
+
+            <input class="form-field" type="text" name="Phone" placeholder="PHONE NUMBER (IF YOU WANT)" formControlName="Phone">
+        </div>
+
+        <div>
+
+            <input class="form-field" type="date" name="Date" placeholder="EVENT DATE" formControlName="Date">
+        </div>
+
+        <div>
+            <div style="padding-top: 15px;"><label class="who-are-you" for="About"><i>WHO ARE YOU?</i></label></div>
+            <textarea class="form-field-textarea" type="textarea" name="About" placeholder="{{deets}}" formControlName="Name"></textarea>
+        </div>
+
+        <div>
+            <button class="button-6" type="submit">SEND</button>
+        </div>
+
+    </form>
+
+    <div class="footer">
+        <hr>
+        <H1>ALTELUCI</H1>
     </div>
-
-    <div>
-
-        <input class="form-field" type="tel" name="Phone" placeholder="xxx-xxx-xxxx" formControlName="Phone">
-    </div>
-
-    <div>
-
-        <input class="form-field" type="date" name="Date" placeholder="EVENT DATE" formControlName="Date">
-    </div>
-
-    <div>
-        <div style="padding-top: 15px;"><label class="who-are-you" for="About"><i>WHO ARE YOU?</i></label></div>
-        <textarea class="form-field-textarea" type="textarea" name="About" placeholder="{{deets}}" formControlName="Name"></textarea>
-    </div>
-
-    <div>
-        <button class="button-6" type="submit">SEND</button>
-    </div>
-
-</form>
 
 
 
