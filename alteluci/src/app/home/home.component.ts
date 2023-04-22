@@ -27,7 +27,23 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         ]
       ),
     ]
-    )
+    ),
+    trigger('heroAnimation',
+    [
+    transition(':enter',
+    [
+      style({opacity: 0}),
+      animate('3.5s 250ms ease-in', style({opacity: 0.9}))
+    ]
+  ),
+  transition(':leave',
+    [
+      style({opacity: 0.9}),
+      animate('0.5s', style({opacity: 0}))
+    ]
+  ),
+]
+),
   ],
   
 

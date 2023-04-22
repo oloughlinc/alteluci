@@ -1,27 +1,59 @@
+<!-- MENUUUUUUUUUUUU -->
 <section *ngIf="showMenu" [@menuAnimation] class="menu-overlay">
-    <H1>HEELO I AM MENU</H1>
-    <p (click)="showMenu=!showMenu">BACK</p>
-    <ul>
-        <li class="menu-item"><h1>HOME</h1></li>
-        <li class="menu-item"><h1>ABOOT</h1></li>
-        <li class="menu-item"><h1>CONTACT</h1></li>
-        <li class="menu-item"><h1>MORE</h1></li>
-    </ul>
+    <p class="menu-header">MENU<br><hr></p>
+    <div class="menu-back">
+        <button class="menu-item menu-back-button" style="align-self: center;" (click)="showMenu=!showMenu">[BACK]</button>
+    </div>
+    <section class="menu-items">
+        <div>
+        <button class="menu-item">HOME</button>
+        </div>
+        <div>
+        <button class="menu-item">ABOUT</button>
+        </div>
+        <div>
+        <button class="menu-item">FEATURED WORKS</button>
+        </div>
+        <div>
+        <button class="menu-item">CONTACT</button>
+        </div>   
+    </section>
 </section>
 
+<!--
 <section class="background-leaf">
 </section>
+-->
 
 <!-- HERO SECTION -->
 <section class="top-banner">
-    <h1 class="logo">A L T E L U C I</h1>
+    <h1 class="logo">[Logo Here]</h1>
     <section class="menu"><button style="background: none; border: none;" (click)="showMenu=!showMenu">MENU</button></section>
-    <section class="top-banner-splash">
-        <p class="top-banner-splash-text"><b>DEEANDRA<br>& SAMUEL</b></p>
-        <p class="top-banner-splash-text-underlay" style="letter-spacing: 15px;">LOS ANGELES, USA</p>
+    <section class="top-banner-splash" [@heroAnimation]>
+        <p class="top-banner-splash-text"><b>ALTELUCI</b></p>
+        <p class="top-banner-splash-text-underlay" style="letter-spacing: 15px; text-align: right;">Wedding Filmography</p>
     </section>
 
 </section>
+
+<!-- HONEY HONEY BAB-->
+<div style="background-color:rgb(85, 59, 42); height:100vh; background-repeat: no-repeat;  background-size: cover; padding: 20px; opacity: 0.98;">
+    <style>
+
+    </style>
+<p class="honey-text" style="text-align: right; color: white;">FILM IN STILE DOCUMENTARIO.</p>
+<p class="honey-text" style="text-align: right; color: white;">CATTURA ONESTA E NOSTALGICA.</p>
+<hr style="width: 25%; float: right;">
+<br>
+<p class="honey-text" style="text-align: right; color: white;">DOCUMENTARY STYLE FILMMAKING.</p>
+<p class="honey-text" style="text-align: right; color: white;">HONEST NOSTALGIC CAPTURE.<p>
+
+<img id="vid1" src="../../assets/images/beach.png" height="360" width="640" style="margin-left: auto; margin-right: auto; display: block;">
+<br>
+<br>
+<p class="honey-honey-text" style="text-align: center; color: white; margin-bottom: 0; padding-bottom: 0; font-size: 60px;">HONEY HONEY</p>
+<p class="honey-text" style="text-align: center; color: white; margin-top: 0; padding-top: 0;">NEI SOGNI</p>
+</div>
 
 <!--FEATURED WORKS-->
 <section class="featured-banner">
@@ -47,30 +79,13 @@
 </section>
 
 
-<!-- HONEY HONEY BAB-->
-<div style="background-color:rgb(85, 59, 42); height:1000px; background-repeat: no-repeat;  background-size: cover; padding: 20px; opacity: 0.98;">
-    <style>
 
-    </style>
-<H1 style="text-align: right; color: white;">FILM IN STILE DOCUMENTARIO.</H1>
-<H1 style="text-align: right; color: white;">CATTURA ONESTA E NOSTALGICA.</H1>
-<hr style="width: 25%; float: right;">
-<br>
-<H1 style="text-align: right; color: white;">DOCUMENTARY STYLE FILMMAKING.</H1>
-<H1 style="text-align: right; color: white;">HONEST NOSTALGIC CAPTURE.</H1>
-
-<img id="vid1" src="../../assets/images/beach.png" height="360" width="640" style="margin-left: auto; margin-right: auto; display: block;">
-<br>
-<br>
-<h1 style="text-align: center; color: white; margin-bottom: 0; padding-bottom: 0; font-size: 60px;">HONEY HONEY</h1>
-<h1 style="text-align: center; color: white; margin-top: 0; padding-top: 0;">NEI SOGNI</h1>
-</div>
 
 <!--Contact Meh-->
 <div class="contact-segment" >
 
     <div class="contact-label">
-        <img src="https://pngfile.net/public/uploads/preview/brown-acrylic-paint-brush-stroke-png-11671358985tximtbpmkg.png" width="200px" height="200px"><br>
+        <img class="contact-img" src="https://pngfile.net/public/uploads/preview/brown-acrylic-paint-brush-stroke-png-11671358985tximtbpmkg.png" width="200px" height="200px"><br>
         <H1 class="contact-label">CONTACT /<br>CONTATTAMI</H1>
     </div>
 
@@ -92,14 +107,18 @@
         </div>
 
         <div>
-
-            <input class="form-field" type="date" name="Date" placeholder="EVENT DATE" formControlName="Date">
+            <input class="form-field" matInput [matDatepicker]="picker" placeholder="EVENT DATE" name="Date" formControlName="Date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            
         </div>
 
         <div>
             <div style="padding-top: 15px;"><label class="who-are-you" for="About"><i>WHO ARE YOU?</i></label></div>
             <textarea class="form-field-textarea" type="textarea" name="About" placeholder="{{deets}}" formControlName="Name"></textarea>
         </div>
+
+
 
         <div>
             <button class="button-6" type="submit">SEND</button>
