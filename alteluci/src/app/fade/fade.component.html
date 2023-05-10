@@ -1,0 +1,141 @@
+<div class="scroll-parent">
+
+
+    <!-- MENUUUUUUUUUUUU -->
+    <section *ngIf="showMenu" [@menuAnimation] class="menu-overlay">
+        <p class="menu-header">MENU<br><hr></p>
+        <div class="menu-back">
+            <button class="menu-item menu-back-button" style="align-self: center;" (click)="showMenu=!showMenu">[BACK]</button>
+        </div>
+        <div class="menu-items">
+            <div>
+            <button class="menu-item">HOME</button>
+            </div>
+            <div>
+            <button class="menu-item">ABOUT</button>
+            </div>
+            <div>
+            <button class="menu-item">FEATURED WORKS</button>
+            </div>
+            <div>
+            <button class="menu-item">CONTACT</button>
+            </div>   
+        </div>
+    </section>
+    
+    <!--
+    <section class="background-leaf">
+    </section>
+    -->
+    
+    <!-- HERO SECTION -->
+    <section class="top-banner" *ngIf="currSection === 1">
+        <div class="white-box"></div>
+        <div class="logo-banner" *ngIf="false"></div>
+        <h1 class="logo">[Logo Here] ALTELUCI</h1>
+        <div class="menu"><button style="background: none; border: none;" (click)="showMenu=!showMenu">MENU</button></div>
+        <div class="top-banner-splash" [@heroAnimation]>
+            <p class="top-banner-splash-text">Wedding Filmography</p>
+            <p class="top-banner-splash-text-underlay" style="letter-spacing: 15px; text-align: left;">Honey Honey Nei Sogni</p>
+        </div>
+    
+    </section>
+
+    <div class="spacer"></div>
+    
+    <!-- HONEY HONEY BAB-->
+    <section *ngIf="currSection === 1" style="z-index: 10; background-color:rgb(85, 59, 42); height:100vh; background-repeat: no-repeat;  background-size: cover; padding: 20px; opacity: 0.98;">
+    
+    <p class="honey-text" style="text-align: right; color: white;">FILM IN STILE DOCUMENTARIO.</p>
+    <p class="honey-text" style="text-align: right; color: white;">CATTURA ONESTA E NOSTALGICA.</p>
+    <hr style="width: 25%; float: right;">
+    <br>
+    <p class="honey-text" style="text-align: right; color: white;">DOCUMENTARY STYLE FILMMAKING.</p>
+    <p class="honey-text" style="text-align: right; color: white;">HONEST NOSTALGIC CAPTURE.<p>
+    
+    <img id="vid1" src="../../assets/images/beach.png" height="360" width="640" style="margin-left: auto; margin-right: auto; display: block;">
+    <br>
+    <br>
+    <p class="honey-honey-text" style="text-align: center; color: white; margin-bottom: 0; padding-bottom: 0; font-size: 60px;">HONEY HONEY</p>
+    <p class="honey-text" style="text-align: center; color: white; margin-top: 0; padding-top: 0;">NEI SOGNI</p>
+    </section>
+    
+    <!--FEATURED WORKS-->
+    <section *ngIf="true" class="featured-banner">
+        <div>
+            <p class="featured-banner-splash-text">FEATURED<br>WORKS /<br>OPERA D'ARTE</p>
+        </div>
+        <div>
+    
+            <!-- EMBEDD VIEMO -->
+            <iframe id="vid1" src="https://player.vimeo.com/video/806024932?h=291ee36184&title=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <p>Brooklyn, New York, New York</p>
+            <!-- END EMBED VIDEO-->
+    
+            <!-- ANOTHER ONE!-->
+            <iframe id="vid1" src="https://player.vimeo.com/video/813227141?h=077b905b65" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <p>Paris, France, Europe</p>
+    
+            <!-- ANOTHER ONE!-->
+            <iframe id="vid1" src="https://player.vimeo.com/video/814028145?h=89e00ebd45&color=732f25" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <p>London, Tokyo, Japan</p>
+    
+        </div>
+    </section>
+    
+    <!--Contact Meh-->
+    <section *ngIf="true" class="contact-segment" >
+    
+        <div class="contact-label">
+            <img class="contact-img" src="https://pngfile.net/public/uploads/preview/brown-acrylic-paint-brush-stroke-png-11671358985tximtbpmkg.png" width="200px" height="200px"><br>
+            <H1 class="contact-label">CONTACT /<br>CONTATTAMI</H1>
+        </div>
+    
+        <form class="contact-form" [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
+    
+            <div>
+    
+                <input class="form-field" type="text" name="Name" placeholder="NAME & PARTNERS NAME" formControlName="Name">
+            </div>
+    
+            <div>
+    
+                <input class="form-field" type="email" name="Email" placeholder="EMAIL" formControlName="Email">
+            </div>
+    
+            <div>
+    
+                <input class="form-field" type="text" name="Phone" placeholder="PHONE NUMBER (IF YOU WANT)" formControlName="Phone">
+            </div>
+    
+            <div>
+                <input class="form-field" matInput [matDatepicker]="picker" placeholder="EVENT DATE" name="Date" formControlName="Date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                
+            </div>
+    
+            <div>
+                <div style="padding-top: 15px;"><label class="who-are-you" for="About"><i>WHO ARE YOU?</i></label></div>
+                <textarea class="form-field-textarea" type="textarea" name="About" placeholder="{{deets}}" formControlName="Name"></textarea>
+            </div>
+    
+    
+    
+            <div>
+                <button class="button-6" type="submit">SEND</button>
+            </div>
+    
+        </form>
+    
+        <div class="footer">
+            <hr>
+            <H1>ALTELUCI</H1>
+        </div>
+    
+    
+    
+    
+    </section>
+    </div>
+    

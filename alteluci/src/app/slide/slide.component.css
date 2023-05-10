@@ -1,13 +1,3 @@
-html,
-body { 
-    margin: 0;
-    padding: 0;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 .white-box {
     position: absolute;
     border: 1px solid white;
@@ -26,22 +16,19 @@ body {
     opacity: 0.5;
 }
 
-.logo-banner {
-    position: absolute;
-    width: 100vw;
-    height: 100px;
-    background-color: rgba(128, 128, 128, 0.25);
-
-    align-self: top;
-    z-index: 5;
-
+section {
+    position: fixed !important;
 }
 
-.scroll-parent { /* Scroll parent controls scrollbar, below disables. can also be used to snap, /*
+.scroll-parent {
     /*
     overflow: hidden; 
     height: 100vh;
     */
+}
+
+.slide-container {
+    height: 300vh; /* set to size of container * num of containers */
 }
 
 .background-leaf {
@@ -65,32 +52,31 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
-    height: max(100vh, 600px);
+    height: 1000px;
     width: 100vw;
+
+    position: fixed;
 
     display: grid;
     grid-template-columns: 1fr minmax(240px, 4fr) 3fr minmax(100px, 1fr) 1fr;
-    grid-template-rows: 25px 1fr 8fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
 
     z-index: 2;
-
 
 }
 
 .top-banner-splash {
     grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 3;  
+    grid-row-start: 2;  
     align-self: center;
-    background-color: rgba(117, 76, 52, 0.0);
+    background-color: rgba(117, 76, 52, 0.5);
     z-index: 999;
 }
 
 .top-banner-splash-text {
-    text-align: left;
-    font-size:90px;
-    letter-spacing: 5px; 
+    text-align: center;
+    font-size:80px; 
+    letter-spacing: 0.2em;
     color:white;
     padding: 0px;
     margin-bottom: 0px;
@@ -116,22 +102,13 @@ body {
 
 .logo {
     grid-column-start: 2;
-    grid-row-start: 2;
-    color: white;
-    z-index: 6;
 }
 
 
 .menu {
     grid-column-start: 4;
-    grid-row-start: 2;
-    color: rgb(173, 149, 133);
-    font-size: 20px;
-    margin-top: 15px;
-    text-align: right;
-    z-index: 6;
+    place-self: center;
 }
-    
 
 /* MENUUUUUUUUUUUUUUUUUU */
 .menu-overlay {
@@ -203,6 +180,9 @@ body {
 
 }
 
+.featured-banner-splash {
+
+}
 
 .featured-banner-splash-text {
     font-size:60px; 
@@ -233,12 +213,33 @@ body {
     
 }
 
+.featured-banner-videos {
 
+}
+
+/*HONEY HONEY*/
+.honey-text {
+    font-size:30px;
+}
+
+.honey-honey-text {
+    font-size: 60px;
+}
+
+@media screen and (max-width: 500px) {
+    .honey-text {
+        font-size: 18px;
+    }
+    .honey-honey-text {
+        font-size:40px;
+    }
+}
 
 /* CONTACT USSS */
 .contact-segment {
     background-color:rgb(223, 202, 176); 
     height:100vh; 
+    width: 100vw;
     padding: 20px;
 
     display: grid;

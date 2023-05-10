@@ -1,13 +1,3 @@
-html,
-body { 
-    margin: 0;
-    padding: 0;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 .white-box {
     position: absolute;
     border: 1px solid white;
@@ -65,15 +55,16 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
-    height: max(100vh, 600px);
+    height: 1000px;
     width: 100vw;
+
+    position: fixed;
 
     display: grid;
     grid-template-columns: 1fr minmax(240px, 4fr) 3fr minmax(100px, 1fr) 1fr;
-    grid-template-rows: 25px 1fr 8fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
 
-    z-index: 2;
+    z-index: -2;
 
 
 }
@@ -81,7 +72,7 @@ body {
 .top-banner-splash {
     grid-column-start: 2;
     grid-column-end: 4;
-    grid-row-start: 3;  
+    grid-row-start: 2;  
     align-self: center;
     background-color: rgba(117, 76, 52, 0.0);
     z-index: 999;
@@ -89,8 +80,7 @@ body {
 
 .top-banner-splash-text {
     text-align: left;
-    font-size:90px;
-    letter-spacing: 5px; 
+    font-size:80px; 
     color:white;
     padding: 0px;
     margin-bottom: 0px;
@@ -116,7 +106,6 @@ body {
 
 .logo {
     grid-column-start: 2;
-    grid-row-start: 2;
     color: white;
     z-index: 6;
 }
@@ -124,14 +113,9 @@ body {
 
 .menu {
     grid-column-start: 4;
-    grid-row-start: 2;
-    color: rgb(173, 149, 133);
-    font-size: 20px;
-    margin-top: 15px;
-    text-align: right;
+    place-self: center;
     z-index: 6;
 }
-    
 
 /* MENUUUUUUUUUUUUUUUUUU */
 .menu-overlay {
@@ -203,6 +187,9 @@ body {
 
 }
 
+.featured-banner-splash {
+
+}
 
 .featured-banner-splash-text {
     font-size:60px; 
@@ -233,7 +220,32 @@ body {
     
 }
 
+.spacer {
+    height: 100vh;
+    opacity: 0;
+}
 
+.featured-banner-videos {
+
+}
+
+/*HONEY HONEY*/
+.honey-text {
+    font-size:30px;
+}
+
+.honey-honey-text {
+    font-size: 60px;
+}
+
+@media screen and (max-width: 500px) {
+    .honey-text {
+        font-size: 18px;
+    }
+    .honey-honey-text {
+        font-size:40px;
+    }
+}
 
 /* CONTACT USSS */
 .contact-segment {

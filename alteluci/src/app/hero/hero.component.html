@@ -1,0 +1,14 @@
+<section class="top-banner">
+    <div class="white-box" [@heroAnimation]></div>
+    <div class="logo"><img class="logo-img" src="../../assets/images/logo.png"></div>
+    <div class="menu"><button class="menu-butt" (click)="showMenu=!showMenu">MENU</button></div>
+    <div class="top-banner-splash" [@heroAnimation2]>
+        <p class="top-banner-splash-text hero-text-anim">DEEANDRA<br>& SAMUEL</p>
+        <!--
+        <p class="top-banner-splash-text-underlay hero-text-anim">LOS ANGELES, USA</p>
+        -->
+        <div class="top-banner-splash-text-underlay">
+            <p *ngFor="let letter of underlay" class="hero-text-anim inline-letters">{{letter}}</p>
+        </div>
+    </div>
+</section>

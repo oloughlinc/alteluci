@@ -4,15 +4,10 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 //animation imports
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
-import { HoneyHoneyComponent } from '../honey-honey/honey-honey.component';
-
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-
-  
-  // this is menu animation and all of this belongs in a menu componennt
+  selector: 'app-slide',
+  templateUrl: './slide.component.html',
+  styleUrls: ['./slide.component.css'],
   animations: [
     trigger('menuAnimation',
     [
@@ -47,13 +42,10 @@ import { HoneyHoneyComponent } from '../honey-honey/honey-honey.component';
 ]
 ),
   ],
-  
-
 })
-export class HomeComponent implements OnInit {
+export class SlideComponent {
 
   showMenu = false;
-
   isScrolling = false;
 
   currSection = 1;
@@ -86,11 +78,18 @@ export class HomeComponent implements OnInit {
 
   @HostListener('document:scroll', ['$event'])
   onScroll(event: any) {
-    console.log('Scrolling...');
-    console.log(event);
+    console.log(document.documentElement.scrollTop);
     this.isScrolling = true;
 
-    this.currSection = 1;
+    if (document.documentElement.scrollTop < 500) {
+      this.currSection = 1;
+    }
+    else if (document.documentElement.scrollTop < 1000) {
+      this.currSection = 2;
+    }
+    else {
+      this.currSection = 3;
+    }
 
     setTimeout(() => {
       this.isScrolling = false;

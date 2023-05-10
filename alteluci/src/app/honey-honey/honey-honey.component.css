@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+.honey-honey {
+    background-color:rgb(66, 53, 28); 
+    height:125vh; 
+    width:100vw; 
+    max-width: 100%;
+    min-height: 1000px;
+    display: grid;
+    grid-template-rows: 75px 3fr 2.2fr 2fr 150px;
+    grid-template-columns: 1fr 2.4fr minmax(150px, 1.6fr) 4fr 1fr;
+}
+
+.honey-texture {
+    height: 125vh;
+    width: 100%;
+    min-height: 1000px;
+    padding: 0;
+    margin: 0;
+    z-index: 999;
+    opacity: 1.0;
+    position: absolute;
+    mix-blend-mode: multiply;
+}
+
+.honey-text {
+    color: rgb(216, 207, 201);
+    grid-column-start: 4;
+    grid-row-start: 2;
+    align-self: center;
+    
+}
+
+.honey-hr {
+    width: 75%; 
+    float: left;
+}
+
+.honey-text-text {
+    font-size: 18px;
+    letter-spacing: 0.2rem;
+    padding-bottom: 25px;
+    font-family: 'Fira Sans', sans-serif;
+    white-space: nowrap;
+}
+
+
+.honey-leaves {
+    z-index: 11;
+    position: absolute;
+    mix-blend-mode: multiply;
+    right: 0;
+    height: 95vh;
+    width: 55vw;
+    /*width: calc(95vh * 1.2);*/
+    max-width: calc(95vh * 1.2);
+
+    margin-top: 30vh;
+}
+
+.honey-logo {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    align-self: center;
+}
+
+.honey-img-container {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+
+    margin: auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.honey-img {
+    
+    object-fit: cover;
+    height: 340px;
+    max-height: 100%;
+    /*width: 620px;*/
+    width: 700px;
+    max-width: 100%;
+    align-self: center;
+
+    
+}
+
+.honey-honey-text-container {
+    color: rgb(216, 207, 201);
+    margin: auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    text-align:  center;
+}
+
+.honey-honey-text {
+    font-size: 60px;
+    font-family: 'Libre Caslon Text';
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.honey-honey-text-underlay {
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-family: 'Gotham Book';
+}
+
+.rotate {
+    transform: rotate(-90deg) translateX(-80%) translateY(-310px);
+    transform-origin: top left;
+}
+
+.lat-text {
+    position: absolute;
+    color: white;
+    font-family: 'Gotham Book';
+    font-size: 19px;
+    letter-spacing: 28px;
+    padding-top: 30vh;
+    white-space: nowrap;
+    float: left;
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 820px) {
+    .rotate {
+        transform: rotate(-90deg) translateX(-80%) translateY(-97%);
+        transform-origin: top left;
+    }
+
+    .honey-honey {
+        height: 100vh;
+    }
+    .honey-texture {
+        height: 100vh;
+    }
+    .honey-leaves {
+        height: 50vh;
+        min-height: 400px;
+        margin-top: max(300px, 30vh);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .honey-img {
+        height: 170px;
+        width: 310px;
+    }
+    .honey-honey { 
+        height: 100vh;
+        min-height: 700px;
+        grid-template-rows: 50px 2fr 2fr 1fr 50px;
+        grid-template-columns: 1fr 2.4fr minmax(25px, 1.6fr) 4fr 1fr;
+    }
+    .honey-logo {
+        visibility: hidden;
+    }
+    .honey-text-text {
+        font-size: 12px;
+        white-space: pre-wrap;
+        padding-bottom: 15px;
+    }
+    .honey-text {
+        color: white;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        align-self: center;
+    }
+    .honey-honey-text {
+        font-size: 30px;
+    }
+    .honey-leaves {
+        height: 50vh;
+        width: 80vw;
+    }
+    .honey-texture {
+        height: 100vh;
+        min-height: 700px;
+    }
+    .rotate {
+        transform: rotate(-90deg) translateX(-80%) translateY(-97%);
+        transform-origin: top left;
+    }
+    .lat-text {
+        font-size: 10px;
+        letter-spacing: 14px;
+    }
+}
