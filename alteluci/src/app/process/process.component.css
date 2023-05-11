@@ -5,10 +5,11 @@
     max-width: 100%;
     position: relative;
     overflow-x: hidden;
+    overflow-y: hidden;
 
     display: grid;
     grid-template-rows: 50px 1fr 50px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50px minmax(150px, 2fr) minmax(1fr, 3fr) 50px;
 }
 
 .process-texture {
@@ -36,7 +37,7 @@
 }
 
 .process-text-block {
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-row-start: 2;
     left:0;
     align-self: center;
@@ -53,5 +54,59 @@
     padding-left: 20px;
     font-size: 12;
     font-family: 'Gotham Book';
+}
+
+@media screen and (max-width: 1300px) {
+    .process-flowers {
+        opacity: 0.5;
+
+    }
+    .process-cursive {
+        transform: translateY(500px);
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .process-flowers {
+        transform: translateX(-200px);
+    }
+    .process-cursive {
+        transform: translateX(-200px) translateY(500px);
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+
+    .process-text-block {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        align-self: auto;
+
+    }
+
+    .process-text-label {
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    .process-text {
+        font-size: 12px;
+    }
+    .process-sec {
+        grid-template-rows: 50px 1fr 50px;
+        grid-template-columns: 25px 1fr 1fr 25px;
+    }
+    .process-flowers {
+        transform: translateX(-350px) translateY(200px);
+        opacity: 0.5;
+
+    }
+    .process-cursive {
+        transform: translateX(-200px) translateY(300px);
+        opacity: 0.8;
+
+    }
+    
 }
 

@@ -1,0 +1,98 @@
+.featured-sec {
+    
+    background-image: url(../../assets/images/featured-texture.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+
+    height: 160vh;
+    width: 100vw;
+    max-width: 100%;
+
+    overflow-x: hidden;
+    overflow: visible;
+
+    position: relative;
+
+    display: grid;
+    /*grid-template-columns: 1fr 4fr 4fr 1fr;*/
+    align-items: start;
+    grid-template-columns: 250px 1fr 1.5fr 50px;
+    grid-template-rows: repeat(autofit, minmax(240px, 1fr));
+
+}
+
+.featured-cursive {
+    position: absolute;
+    bottom:0;
+    mix-blend-mode: multiply;
+    transform: translateX(-50px) translateY(50px);
+}
+
+.arrow {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.featured-splash-text {
+    font-size:48px; 
+    font-family: 'Libre Calson Text', serif;
+    color: rgb(134, 110, 94);
+
+    grid-column-start: 2;
+    align-self: start;
+    padding-top: 100px;
+
+}
+
+.featured-videos {
+    padding-top: 100px;
+    padding-left: 50px;
+}
+
+.featured-videos-text {
+    font-family: 'Gotham Book';
+    color: rgb(134, 110, 94);
+    padding-left: 20px;
+}
+
+.featured-video-container {
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .featured-banner-splash-text {
+        font-size: 40px;
+    }
+    .featured-banner {
+        grid-template-columns: 1fr;
+    }
+    #vid1 {
+        width: 300px;
+        height: 200px;
+    }
+    #vid2 {
+        width: 300px;
+        height: 200px;
+    }
+    #vid3 {
+        width: 300px;
+        height: 200px;
+    }
+    
+}
+
+.vid-player {
+    width: 500px; 
+    height: 280px;
+}
+
+.embed {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.highlight-hover:hover{
+    opacity:0.6;
+}

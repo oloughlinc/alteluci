@@ -16,6 +16,7 @@ import { FadeComponent } from './fade/fade.component';
 import { HoneyHoneyComponent } from './honey-honey/honey-honey.component';
 import { HeroComponent } from './hero/hero.component';
 import { ProcessComponent } from './process/process.component';
+import { FeaturedComponent } from './featured/featured.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ProcessComponent } from './process/process.component';
     FadeComponent,
     HoneyHoneyComponent,
     HeroComponent,
-    ProcessComponent
+    ProcessComponent,
+    FeaturedComponent
   ],
   imports: [
     BrowserModule,
