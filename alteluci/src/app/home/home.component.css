@@ -291,7 +291,9 @@ body {
 
 .who-are-you {
     padding: 15px;
+    padding-left: 25px;
     margin-top: 20px;
+    border: 1px solid red;
 }
 
 .button-6 {

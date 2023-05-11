@@ -4,7 +4,7 @@
     background-size: cover; 
     background-repeat: no-repeat;
 
-    height: 160vh;
+    height: 1700px;
     width: 100vw;
     max-width: 100%;
 
@@ -14,9 +14,8 @@
     position: relative;
 
     display: grid;
-    /*grid-template-columns: 1fr 4fr 4fr 1fr;*/
     align-items: start;
-    grid-template-columns: 250px 1fr 1.5fr 50px;
+    grid-template-columns: minmax(50px, 250px) minmax(350px, 1fr) 1.5fr 50px;
     grid-template-rows: repeat(autofit, minmax(240px, 1fr));
 
 }
@@ -39,7 +38,6 @@
     color: rgb(134, 110, 94);
 
     grid-column-start: 2;
-    align-self: start;
     padding-top: 100px;
 
 }
@@ -59,40 +57,69 @@
     padding-bottom: 20px;
 }
 
-@media screen and (max-width: 1200px) {
-    .featured-banner-splash-text {
-        font-size: 40px;
-    }
-    .featured-banner {
-        grid-template-columns: 1fr;
-    }
-    #vid1 {
-        width: 300px;
-        height: 200px;
-    }
-    #vid2 {
-        width: 300px;
-        height: 200px;
-    }
-    #vid3 {
-        width: 300px;
-        height: 200px;
+@media screen and (max-width: 1160px) {
+
+    .featured-videos-text {
+        text-align: right;
+        padding-right: 20px;
     }
     
 }
 
-.vid-player {
-    width: 500px; 
-    height: 280px;
+@media screen and (max-width: 1000px) {
+    .featured-splash-text {
+        font-size: 40px;
+        grid-column-start: 1;
+        grid-row-start: 2;
+        height: fit-content;
+        padding:0;
+        margin:0;
+        padding-bottom:0px;
+        text-align: center;
+    }
+    .featured-videos {
+        padding-top: 0px;
+        padding-left: 0;
+        grid-row-start: 4;
+    }
+    .featured-video-container {
+        width:fit-content;
+        margin: 0 auto;
+    }
+    .featured-videos-text {
+        text-align: center;
+    }
+    .arrow {
+        display: none;
+    }
+    .featured-sec {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 50px 10fr 20px;
+    }
+    .featured-cursive {
+        opacity: 0.25;
+    }
 }
 
-.embed {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+@media screen and (max-width: 580px) {
 
-.highlight-hover:hover{
-    opacity:0.6;
+        .featured-cursive {
+            transform: translateX(-300px);
+        }
+
+        .featured-splash-text {
+            font-size: 28px;
+        }
+
+        .featured-videos-text {
+            font-size: 12px;
+            padding-top:0px;
+            margin-top: 0px;
+        }
+        .featured-sec {
+            height: 1200px;
+            grid-template-rows: 3% 1fr 3% 12fr 20px;
+        }
+
+    
 }

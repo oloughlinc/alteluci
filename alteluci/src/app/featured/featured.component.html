@@ -8,47 +8,29 @@
         OPERE D'ARTE<br>
         <img class="arrow" src="../../assets/images/arrow-down.png">
     </div>
+
     <div class="featured-videos">
 
         <div class="featured-video-container">
-            <iframe src="https://player.vimeo.com/video/734840039?h=6387935871" width="500" height="280" frameborder="0" allow="autoplay; fullscreen;" allowfullscreen></iframe>
+            <app-video-wrapper link="https://player.vimeo.com/video/734840039?h=6387935871&autoplay=1" image="../../assets/images/vid-still-carmel.png"></app-video-wrapper>
             <p class="featured-videos-text">CARMEL VALLEY, CALIFORNIA, USA</p>
         </div>
 
         <div class="featured-video-container">
-            <iframe src="https://player.vimeo.com/video/449583234?h=282310f01a" width="500" height="280" frameborder="0" allow="autoplay; fullscreen;" allowfullscreen></iframe>
+            <app-video-wrapper link="https://player.vimeo.com/video/449583234?h=282310f01a&autoplay=1" image="../../assets/images/vid-still-puglia.png"></app-video-wrapper>
             <p class="featured-videos-text">BRINDISI, APUGLIA, ITALY</p>
         </div>
-
+    
         <div class="featured-video-container">
-            <div class="vid-player highlight-hover">
-                <div *ngIf="!play" style="position:relative" (click)="onPlayClick()">
-                    <img  src="../../assets/images/vid-still-warwick.png" height="100%" width="100%">
-                    <img src="../../assets/images/butt-play.png" style="position: absolute; top:0; left:0; right:0; bottom:0; margin:auto;">
-                </div>
-                <div *ngIf="play" style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/255681902?h=73b2f72841&autoplay=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-            </div>
+            <app-video-wrapper link="https://player.vimeo.com/video/255681902?h=73b2f72841&autoplay=1" image="../../assets/images/vid-still-warwick.png"></app-video-wrapper>
             <p class="featured-videos-text">WARWICK, NEW YORK, USA</p>
         </div>
 
         <div class="featured-video-container">
-            <div class="vid-player highlight-hover">
-                <div *ngIf="!play" style="position:relative" (click)="onPlayClick()">
-                    <img src="../../assets/images/vid-still-queens.png" height="100%" width="100%">
-                    <img src="../../assets/images/butt-play.png" style="position: absolute; top:0; left:0; right:0; bottom:0; margin:auto;">
-                </div>
-                <div *ngIf="play" style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/443916730?h=c75627ed40&autoplay=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-            </div>
+            <app-video-wrapper link="https://player.vimeo.com/video/443916730?h=c75627ed40&autoplay=1" image="../../assets/images/vid-still-queens.png" [darkPlayButton]="true"></app-video-wrapper>
             <p class="featured-videos-text">QUEENS, NEW YORK, USA</p>
         </div>
 
-        <!--
-        <div class="featured-video-container">
-            <iframe src="https://player.vimeo.com/video/443916730?h=c75627ed40" width="500" height="280" frameborder="0" allow="autoplay; fullscreen;" allowfullscreen></iframe>
-            <p class="featured-videos-text">QUEENS, NEW YORK, USA</p>
-            </div>
-        -->
-        
-
     </div>
+
 </section>

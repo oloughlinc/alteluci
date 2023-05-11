@@ -17,6 +17,9 @@ import { HoneyHoneyComponent } from './honey-honey/honey-honey.component';
 import { HeroComponent } from './hero/hero.component';
 import { ProcessComponent } from './process/process.component';
 import { FeaturedComponent } from './featured/featured.component';
+import { VideoWrapperComponent } from './video-wrapper/video-wrapper.component';
+import { ContactComponent } from './contact/contact.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -28,7 +31,9 @@ import { FeaturedComponent } from './featured/featured.component';
     HoneyHoneyComponent,
     HeroComponent,
     ProcessComponent,
-    FeaturedComponent
+    FeaturedComponent,
+    VideoWrapperComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +43,7 @@ import { FeaturedComponent } from './featured/featured.component';
     MatDatepickerModule,
     MatFormFieldModule,
     MatNativeDateModule,
+    MatIconModule,
   ],
   exports: [
   ],

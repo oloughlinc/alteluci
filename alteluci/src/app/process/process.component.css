@@ -1,6 +1,8 @@
 .process-sec {
     background-color: rgb(126, 114, 91);
     height: 100vh;
+    min-height: 800px;
+    max-height: 1200px;
     width: 100vw;
     max-width: 100%;
     position: relative;
@@ -9,7 +11,8 @@
 
     display: grid;
     grid-template-rows: 50px 1fr 50px;
-    grid-template-columns: 50px minmax(150px, 2fr) minmax(1fr, 3fr) 50px;
+    /*grid-template-columns: 50px minmax(150px, 2fr) minmax(1fr, 3fr) 50px;*/
+    grid-template-columns: minmax(50px, 250px) minmax(350px, 1fr) minmax(550px, 1.5fr) 50px;
 }
 
 .process-texture {
@@ -56,7 +59,7 @@
     font-family: 'Gotham Book';
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
     .process-flowers {
         opacity: 0.5;
 
@@ -66,13 +69,23 @@
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
+
+    .process-sec {
+        grid-template-columns: 1fr;
+    }
+    .process-text-block {
+        grid-column-start: 1;
+        place-self: center;
+    }
 
     .process-flowers {
         transform: translateX(-200px);
     }
     .process-cursive {
-        transform: translateX(-200px) translateY(500px);
+        transform: translateX(50px) translateY(-50px);
+        padding:0;
+        bottom:0;
     }
     
 }
@@ -88,23 +101,19 @@
 
     .process-text-label {
         font-size: 24px;
-        padding-left: 20px;
+        padding-left: 0;
+        text-align: center;
     }
     .process-text {
         font-size: 12px;
     }
     .process-sec {
-        grid-template-rows: 50px 1fr 50px;
+        grid-template-rows: 15% 1fr 15%;
         grid-template-columns: 25px 1fr 1fr 25px;
     }
     .process-flowers {
         transform: translateX(-350px) translateY(200px);
         opacity: 0.5;
-
-    }
-    .process-cursive {
-        transform: translateX(-200px) translateY(300px);
-        opacity: 0.8;
 
     }
     

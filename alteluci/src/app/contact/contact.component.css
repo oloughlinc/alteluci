@@ -1,0 +1,133 @@
+.contact-sec {
+
+    height: 100vh;
+    min-height: 900px;
+    width: 100vw;
+    max-width: 100%;
+
+    display: grid;
+    align-items: start;
+    grid-template-columns: minmax(50px, 250px) minmax(350px, 1fr) 1.5fr 50px;
+    grid-template-rows: 15% 1fr 10%;
+
+    background-color: rgb(250, 249, 245);
+}
+
+.contact-label {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.contact-img {
+    mix-blend-mode: multiply;
+    padding-left: 60px;
+}
+
+.contact-label-text {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 30px;
+    color: rgb(134, 110, 94);
+}
+
+.contact-form {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    align-self: top;
+}
+
+
+.form-field {
+    width: 500px;
+    background-color: rgba(0,0,0,0);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid rgb(66, 26, 28);
+    padding: 10px;
+    margin: 10px;
+
+    font-size: 12px;
+    font-family: 'Gotham Book';
+    color:rgb(66, 26, 28);
+}
+
+.form-field::placeholder {
+    color:rgb(66, 26, 28);
+    opacity: 0.8;
+}
+
+.form-field:focus {
+    outline: none;
+}
+
+.form-field-textarea {
+    width: 500px;
+    background-color: rgba(0,0,0,0);
+    height: 250px;
+    border: 2px solid rgb(66, 26, 28);
+    padding: 10px;
+    margin: 10px;
+    resize: none;
+
+    font-size: 12px;
+    font-family: 'Gotham Book';
+    color:rgb(66, 26, 28);
+}
+
+.form-field-textarea::placeholder {
+    color:rgb(66, 26, 28);
+    opacity: 0.8;
+}
+
+.form-field-textarea:focus {
+    outline: none;
+}
+
+.who-are-you {
+    padding: 15px;
+    padding-left: 18px;
+    margin-top: 20px;
+
+    font-family: 'Gotham Book';
+    font-size: 12px;
+    color:rgb(66, 26, 28);
+}
+
+.button-submit {
+
+    width: 136px;
+    height: 38px; 
+
+    background-color: rgba(0,0,0,0);
+    border: 1.5px solid rgb(66, 26, 28);
+    border-radius: 25px;;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    cursor: pointer;
+    margin: 10px;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    font-family: 'Gotham Book';
+    font-size: 16px;
+    color:rgb(66, 26, 28);
+  }
+
+  .button-submit:hover {
+    background-color: rgb(252, 239, 222);
+  }
+  
+  .button-submit:active {
+    background-color: rgb(212, 163, 102);
+
+  }
+
+  .picker-icon-container {
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 8px;
+    padding-right: 15px;
+  }

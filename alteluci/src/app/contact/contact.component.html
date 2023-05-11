@@ -1,0 +1,46 @@
+<section class="contact-sec">
+
+    <div class="contact-label">
+        <img class="contact-img" src="../../assets/images/smudge.png" width="108px" height="90px">
+        <p class="contact-label-text">CONTACT /<br>CONTATTAMI</p>
+    </div>
+
+    <form class="contact-form" [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
+
+        <div>
+            <input class="form-field" type="text" name="Name" placeholder="NAME & PARTNERS NAME" formControlName="Name">
+        </div>
+
+        <div>
+            <input class="form-field" type="email" name="Email" placeholder="EMAIL" formControlName="Email">
+        </div>
+
+        <div>
+            <input class="form-field" type="text" name="Phone" placeholder="PHONE NUMBER (IF YOU WANT)" formControlName="Phone">
+        </div>
+
+        <div style="position: relative; width:fit-content;">
+            <input class="form-field" matInput [matDatepicker]="picker" placeholder="EVENT DATE" name="Date" formControlName="Date">
+            <div class="picker-icon-container">
+                <mat-datepicker-toggle [for]="picker">
+                    
+                    <mat-icon matDatepickerToggleIcon style="height: 20px; width:30px">
+                        <img src="../../assets/images/picker-down.png" style="margin: 0 auto; width: 21px; height: 13px; padding-bottom: 5px; padding-right: 5px;">
+                    </mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </div>
+        </div>
+
+        <div>
+            <div style="padding-top: 15px;"><label class="who-are-you" for="About">WHO ARE YOU?</label></div>
+            <textarea class="form-field-textarea" type="textarea" name="About" placeholder="{{deets}}" formControlName="Name"></textarea>
+        </div>
+
+        <div>
+            <button class="button-submit" type="submit">SEND</button>
+        </div>
+        
+    </form>
+
+</section>

@@ -4,6 +4,7 @@
 <app-honey-honey></app-honey-honey>
 <app-process></app-process>
 <app-featured></app-featured>
+<app-contact></app-contact>
 
 
 <!-- MENUUUUUUUUUUUU -->
@@ -32,60 +33,4 @@
 <section class="background-leaf">
 </section>
 -->
-
-
-<!--Contact Meh-->
-<section *ngIf="true" class="contact-segment" >
-
-    <div class="contact-label">
-        <img class="contact-img" src="https://pngfile.net/public/uploads/preview/brown-acrylic-paint-brush-stroke-png-11671358985tximtbpmkg.png" width="200px" height="200px"><br>
-        <H1 class="contact-label">CONTACT /<br>CONTATTAMI</H1>
-    </div>
-
-    <form class="contact-form" [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
-
-        <div>
-
-            <input class="form-field" type="text" name="Name" placeholder="NAME & PARTNERS NAME" formControlName="Name">
-        </div>
-
-        <div>
-
-            <input class="form-field" type="email" name="Email" placeholder="EMAIL" formControlName="Email">
-        </div>
-
-        <div>
-
-            <input class="form-field" type="text" name="Phone" placeholder="PHONE NUMBER (IF YOU WANT)" formControlName="Phone">
-        </div>
-
-        <div>
-            <input class="form-field" matInput [matDatepicker]="picker" placeholder="EVENT DATE" name="Date" formControlName="Date">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-            
-        </div>
-
-        <div>
-            <div style="padding-top: 15px;"><label class="who-are-you" for="About"><i>WHO ARE YOU?</i></label></div>
-            <textarea class="form-field-textarea" type="textarea" name="About" placeholder="{{deets}}" formControlName="Name"></textarea>
-        </div>
-
-
-
-        <div>
-            <button class="button-6" type="submit">SEND</button>
-        </div>
-
-    </form>
-
-    <div class="footer">
-        <hr>
-        <H1>ALTELUCI</H1>
-    </div>
-
-
-
-
-</section>
 </div>
