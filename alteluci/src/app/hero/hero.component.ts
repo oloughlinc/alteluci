@@ -13,12 +13,12 @@ import { trigger, state, style, animate, transition, query, stagger } from '@ang
       transition(':enter',
         [
           style({opacity: 0}),
-          animate('0.5s', style({opacity: 0.9}))
+          animate('0.5s', style({opacity: 0.5}))
         ]
       ),
       transition(':leave',
         [
-          style({opacity: 0.9}),
+          style({opacity: 0.5}),
           animate('0.5s', style({opacity: 0}))
         ]
       ),

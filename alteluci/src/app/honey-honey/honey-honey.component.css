@@ -7,8 +7,10 @@
     max-width: 100%;
     min-height: 1000px;
     display: grid;
-    grid-template-rows: 75px 3fr 2.2fr 2fr 150px;
-    grid-template-columns: 1fr 2.4fr minmax(150px, 1.6fr) 4fr 1fr;
+    grid-template-rows: 75px 2fr 1fr 2.2fr 2fr 150px;
+    /*grid-template-columns: 1fr 2.4fr minmax(150px, 1.6fr) 4fr 1fr;*/
+    /*grid-template-columns: minmax(10px, 1.5fr) 50px minmax(350px, 2.3fr) minmax(600px, 2.3fr) 50px minmax(10px, 1fr);*/
+    grid-template-columns: minmax(50px, 1fr) 50px minmax(200px, 550px) minmax(500px, 550px) 50px minmax(50px, 1fr);
 }
 
 .honey-texture {
@@ -26,6 +28,7 @@
 .honey-text {
     color: rgb(216, 207, 201);
     grid-column-start: 4;
+    grid-column-end: 5;
     grid-row-start: 2;
     align-self: center;
     
@@ -41,7 +44,7 @@
     letter-spacing: 0.2rem;
     padding-bottom: 25px;
     font-family: 'Fira Sans', sans-serif;
-    white-space: nowrap;
+
 }
 
 
@@ -61,13 +64,15 @@
 .honey-logo {
     grid-column-start: 3;
     grid-row-start: 2;
-    align-self: center;
+    place-self: center;
+    padding-left: 5%;
+
 }
 
 .honey-img-container {
     grid-column-start: 2;
     grid-column-end: 5;
-    grid-row-start: 3;
+    grid-row-start: 4;
 
     margin: auto;
     top:0;
@@ -103,7 +108,7 @@
     right:0;
     grid-column-start: 2;
     grid-column-end: 5;
-    grid-row-start: 4;
+    grid-row-start: 5;
     text-align:  center;
 }
 

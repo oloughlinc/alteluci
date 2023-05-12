@@ -5,21 +5,46 @@
 }
 
 .white-box {
+    /*
     position: absolute;
     border: 1px solid white;
-    width: 65vw;
+    width: 55vw;
     height: 68vh;
+    */
 
     /* sacred text: 
     /* how to center a div */
+    /*
     margin: auto;
     top:0;
     bottom:0;
     left:0;
     right:0;
+    */
     /* /sacred text */
 
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    width: 90%;
+    height: 90%;
+
+    place-self: center;
+    border: 1px solid white;
+
     opacity: 0.5;
+    
+}
+
+.logo {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    place-self: center;
+    z-index: 6;
+}
+.logo-img {
+    height: 53px;
+    width: 45px;
 }
 
 .logo-banner {
@@ -44,7 +69,10 @@
     max-width: 100%;
 
     display: grid;
-    grid-template-columns: minmax(25px, 1fr) minmax(200px, 4fr) 3fr minmax(100px, 1fr) minmax(25px, 1fr);
+    /*grid-template-columns: minmax(25px, 1fr) minmax(200px, 4fr) 3fr minmax(100px, 1fr) minmax(25px, 1fr);*/
+    /*grid-template-columns: minmax(50px, 1fr) 50px minmax(400px, 2.3fr) minmax(400px, 2.3fr) 50px minmax(50px, 1fr);*/
+    /*grid-template-columns: 1fr 50px 4fr 4fr 50px 1fr;*/
+    grid-template-columns: minmax(50px, 1fr) 50px minmax(200px, 550px) minmax(500px, 550px) 50px minmax(50px, 1fr);
     grid-template-rows: 25px 1fr 8fr 1fr;
 
     z-index: 2;
@@ -54,7 +82,7 @@
 
 .top-banner-splash {
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 3;  
     align-self: center;
     z-index: 999;
@@ -146,26 +174,14 @@
     text-align: left; 
 }
 
-.logo {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    color: white;
-    z-index: 6;
-}
-.logo-img {
-    height: 53px;
-    width: 45px;
-}
-
-
 .menu {
-    grid-column-start: 4;
+    grid-column-start: 5;
     grid-row-start: 2;
     color: rgb(173, 149, 133);
     font-size: 20px;
-    margin-top: 15px;
     text-align: right;
     z-index: 6;
+    place-self: center;
 }
 
 .menu-butt {
