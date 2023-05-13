@@ -1,34 +1,11 @@
-<div class="scroll-parent">
 
-<app-hero></app-hero>
+<div class="scroll-parent" [ngClass]="{'lock-scroll': showMenu}">
+<app-menu *ngIf="showMenu" (onBackClicked)="toggleMenu($event)" ></app-menu>
+<app-hero (onMenuClicked)="toggleMenu($event)"></app-hero>
 <app-honey-honey></app-honey-honey>
 <app-process></app-process>
 <app-featured></app-featured>
 <app-contact></app-contact>
-
-
-<!-- MENUUUUUUUUUUUU -->
-<section *ngIf="showMenu" [@menuAnimation] class="menu-overlay">
-    <p class="menu-header">MENU<br><hr></p>
-    <div class="menu-back">
-        <button class="menu-item menu-back-button" style="align-self: center;" (click)="showMenu=!showMenu">[BACK]</button>
-    </div>
-    <div class="menu-items">
-        <div>
-        <button class="menu-item">HOME</button>
-        </div>
-        <div>
-        <button class="menu-item">ABOUT</button>
-        </div>
-        <div>
-        <button class="menu-item">FEATURED WORKS</button>
-        </div>
-        <div>
-        <button class="menu-item">CONTACT</button>
-        </div>   
-    </div>
-</section>
-
 <!--
 <section class="background-leaf">
 </section>

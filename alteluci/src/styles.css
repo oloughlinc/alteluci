@@ -2,3 +2,28 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('./assets/fonts/gotham-book-webfont.woff2') format('woff2');
+}
+
+/* Using consistent grid columns between sections, took some liberty with lower resolutions*/
+section {
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: minmax(50px, 1fr) 50px minmax(200px, 550px) minmax(500px, 550px) 50px minmax(50px, 1fr);
+}
+
+@media screen and (max-width:1000px) {
+    section {
+        grid-template-columns: minmax(50px, 1fr) 50px minmax(125px, 310px) minmax(375px, 310px) 50px minmax(50px, 1fr);
+    }
+}
+@media screen and (max-width:700px) {
+    section {
+        grid-template-columns: minmax(10%, 1fr) 30px minmax(114px, 220px) minmax(114px, 220px) 30px minmax(10%, 1fr);
+    }
+}

@@ -3,8 +3,7 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 
 //animation imports
 import { trigger, state, style, animate, transition } from '@angular/animations';
-
-import { HoneyHoneyComponent } from '../honey-honey/honey-honey.component';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-home',
@@ -80,8 +79,8 @@ export class HomeComponent implements OnInit {
     //pass
   }
 
-  public toggleMenu(){
-    this.showMenu = !this.showMenu;
+  public toggleMenu(menu: boolean){
+    this.showMenu = menu;
   }
 
   @HostListener('document:scroll', ['$event'])

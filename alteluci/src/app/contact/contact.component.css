@@ -2,13 +2,9 @@
 
     height: 100vh;
     min-height: 900px;
-    width: 100vw;
-    max-width: 100%;
 
-    display: grid;
     align-items: start;
-    /*grid-template-columns: minmax(50px, 300px) 50px minmax(300px, 1fr) minmax(500px, 1fr) 50px minmax(50px, 300px);*/
-    grid-template-columns: minmax(50px, 1fr) 50px minmax(200px, 550px) minmax(500px, 550px) 50px minmax(50px, 1fr);
+
     grid-template-rows: 15% 1fr 12%;
 
     background-color: rgb(250, 249, 245);
@@ -36,9 +32,17 @@
     align-self: top;
 }
 
+.sm {
+  display: none;
+}
+
+.lrg {
+  display: inline-block;
+}
+
 
 .form-field {
-    width: 500px;
+    width: 90%;
     background-color: rgba(0,0,0,0);
     border-top: 0px;
     border-left: 0px;
@@ -62,7 +66,7 @@
 }
 
 .form-field-textarea {
-    width: 500px;
+    width: 90%;
     background-color: rgba(0,0,0,0);
     height: 250px;
     border: 2px solid rgb(66, 26, 28);
@@ -170,3 +174,94 @@
     color: rgb(134, 110, 94);
 
   }
+
+  @media screen and (max-width:1000px) {
+
+    .contact-sec {
+      grid-template-rows: 5% 1fr 2fr 12%;
+      min-height: 1050px;
+    }
+
+    .contact-label {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      place-self: center;
+    }
+
+    .contact-form {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 3;
+      padding-bottom: 40px;
+    }
+
+    .footer {
+      grid-row-start: 4;
+    }
+
+    .footer-labels {
+      grid-row-start: 4;
+
+    }
+
+    .footer-right-labels {
+      font-size: 12px;
+      margin-left: 3%;
+    }
+
+    .footer-brand {
+      margin:0;
+      padding-top: 25px;
+    }
+
+  }
+
+  @media screen and (max-width:800px) {
+
+    .sm {
+      display: inline-block;
+    }
+    .lrg {
+      display: none;
+    }
+    
+  }
+
+  @media screen and (max-width:700px) {
+
+    .contact-sec {
+      grid-template-rows: 5% 1fr 4fr 8%;
+      min-height: 950px;
+    }
+
+    .contact-form {
+      grid-column-start: 2;
+      grid-column-end: 6;
+      transform: translateX(-5px);
+      align-self: center;
+    }
+
+    .contact-img {
+      display: none;
+    }
+
+    .footer-labels {
+      grid-column-start: 2;
+      grid-column-end:6;
+    }
+
+    .contact-label-text {
+      font-size: 25px;
+    }
+
+    .footer-brand {
+      padding-top: 30px;
+      font-size: 25px;
+    }
+
+    .x-sm {
+      display: none;
+    }
+    
+  }
+

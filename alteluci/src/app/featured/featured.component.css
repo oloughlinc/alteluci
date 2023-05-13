@@ -5,20 +5,10 @@
     background-repeat: no-repeat;
 
     height: 1700px;
-    width: 100vw;
-    max-width: 100%;
-
     overflow-x: hidden;
     overflow: visible;
-
     position: relative;
-
-    display: grid;
     align-items: start;
-    /*grid-template-columns: minmax(10px, 300px) 50px minmax(350px, 1fr) minmax(600px, 1fr) 50px minmax(10px, 300px);*/
-    /*grid-template-columns: minmax(50px, 250px) minmax(350px, 1fr) 1.5fr 50px;*/
-    /*grid-template-columns: 1fr 50px 4fr 4fr 50px 1fr;*/
-    grid-template-columns: minmax(50px, 1fr) 50px minmax(200px, 550px) minmax(500px, 550px) 50px minmax(50px, 1fr);
     grid-template-rows: repeat(autofit, minmax(240px, 1fr));
 
 }
@@ -75,17 +65,20 @@
 @media screen and (max-width: 1000px) {
     .featured-splash-text {
         font-size: 40px;
-        grid-column-start: 1;
+        grid-column-start: 3;
+        grid-column-end: 5;
         grid-row-start: 2;
         height: fit-content;
         padding:0;
         margin:0;
+        width: 100%;
         padding-bottom:0px;
         text-align: center;
     }
     .featured-videos {
         padding-top: 0px;
         padding-left: 0;
+        grid-column-start: 3;
         grid-row-start: 4;
     }
     .featured-video-container {
@@ -99,7 +92,7 @@
         display: none;
     }
     .featured-sec {
-        grid-template-columns: 1fr;
+        /*grid-template-columns: 1fr;*/
         grid-template-rows: 50px 1fr 50px 10fr 20px;
     }
     .featured-cursive {
@@ -107,7 +100,11 @@
     }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 700px) {
+
+        .featured-sec {
+            height: 1000px;
+        }
 
         .featured-cursive {
             transform: translateX(-300px);
@@ -116,10 +113,14 @@
         .featured-splash-text {
             font-size: 28px;
         }
+        .featured-videos {
+            grid-column-start: 2;
+            grid-column-end: 6;
+        }
 
         .featured-videos-text {
             font-size: 12px;
-            padding-top:0px;
+            padding-top:20px;
             margin-top: 0px;
         }
         .featured-sec {

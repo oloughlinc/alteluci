@@ -1,0 +1,135 @@
+.menu-overlay {
+    z-index: 9999;
+    position: fixed;
+    background-color: black;
+    opacity: 1;
+    height: 100vh;
+
+    display: grid;
+    /*grid-template-rows: 1fr 5fr 2fr;*/
+    grid-template-rows: 25px 100px 8fr 1fr;
+    overflow-y: hidden;
+}
+
+
+
+.menu-logo {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    padding-top: 20px;
+    opacity: 0.6;
+}
+
+.alte-text {
+    grid-row-start: 2;
+    grid-column-start: 3;
+    font-size: 30px;
+    font-family: 'Libre Caslon Text', serif;
+    color: grey;
+    padding-left: 30px;
+    letter-spacing: 5px;
+    padding-top: 10px;
+
+}
+.divider {
+    grid-column-start: 2;
+    grid-column-end: 6;
+
+    grid-row-start: 2;
+    bottom:0;
+    position: relative;
+    
+}
+
+.menu-header {
+    color: white;
+    font-size: 60px;
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+.menu-back {
+    grid-column-start: 5;
+        grid-row-start: 2;
+        place-self: center;
+        z-index: 99999;
+    height: fit-content !important;
+}
+
+.menu-items {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    align-self: center;
+    margin-top: 30px;
+    
+}
+
+.menu-back-button {
+    font-size: 18px !important;
+    margin: auto !important;
+    align-self: center !important;
+    padding-bottom: 0px !important;
+}
+
+.menu-item {
+    background: none;
+    border: none;
+    color: grey;
+    font-size: 55px;
+    font-family: 'Libre Caslon Text', serif;
+    padding-bottom: 40px;
+}
+
+.menu-item:hover {
+    color: white;
+}
+
+.sm {
+    display: none;
+}
+
+@media screen and (max-width:850px) {
+
+    .lrg {
+        display: none;
+    }
+    .sm { 
+        display: inline-block;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+
+    .menu-items {
+        place-self: center;
+    }
+    .menu-item {
+        font-size: 40px;
+    }
+
+    .menu-back-button {
+        font-size: 12px !important;
+    }
+
+    .menu-logo {
+        height: 35px;
+        width: 30px;
+        padding-top: 30px;
+    }
+
+    .alte-text {
+        font-size: 18px;
+        padding-top: 20px;
+    }
+    
+}
+
+@media screen and (max-height:500px) {
+
+    .menu-overlay {
+        overflow-y: scroll;
+    }
+    
+}

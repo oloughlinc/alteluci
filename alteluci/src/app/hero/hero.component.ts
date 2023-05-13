@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 //animation imports
 import { trigger, state, style, animate, transition, query, stagger } from '@angular/animations';
@@ -8,22 +8,6 @@ import { trigger, state, style, animate, transition, query, stagger } from '@ang
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css'],
   animations: [
-    trigger('menuAnimation',
-    [
-      transition(':enter',
-        [
-          style({opacity: 0}),
-          animate('0.5s', style({opacity: 0.5}))
-        ]
-      ),
-      transition(':leave',
-        [
-          style({opacity: 0.5}),
-          animate('0.5s', style({opacity: 0}))
-        ]
-      ),
-    ]
-    ),
     trigger('heroAnimation',
     [
     transition(':enter',
@@ -73,7 +57,11 @@ export class HeroComponent implements OnInit {
     */
   }
 
-  showMenu: boolean = false;
+  @Output() onMenuClicked: EventEmitter<boolean> = new EventEmitter();
+  public onMenuButton() {
+    this.onMenuClicked.emit(true);
+  }
+
 
   private text = "LOS ANGELES, USA";
   public underlay = this.text.split("");
