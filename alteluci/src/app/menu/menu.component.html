@@ -1,4 +1,4 @@
-<section [@menuAnimation] [@menuItemAnimation] class="menu-overlay">
+<section *ngIf="showMenu" [@menuAnimation] [@menuItemAnimation] class="menu-overlay">
 
     <img class="menu-logo" src="../../assets/images/logo-white-butt.png">
     <p class="alte-text">ALTELUCI</p>
@@ -11,22 +11,22 @@
     </div>
     <div class="menu-items">
         <div>
-        <button class="menu-item menu-item-animate">HOME</button>
+        <button class="menu-item menu-item-animate">Home</button>
         </div>
         <div>
-        <button class="menu-item menu-item-animate">ABOUT</button>
+        <button class="menu-item menu-item-animate">About</button>
         </div>
         <div>
-        <button class="menu-item menu-item-animate">PROCESS</button>
+        <button class="menu-item menu-item-animate">Process</button>
         </div>
         <div>
-        <button class="menu-item menu-item-animate sm">FEATURED</button>
+        <button class="menu-item menu-item-animate sm">Featured</button>
         </div>
         <div>
-        <button class="menu-item menu-item-animate lrg">FEATURED WORKS</button>
+        <button class="menu-item menu-item-animate lrg">Featured Works</button>
         </div>
         <div>
-        <button class="menu-item menu-item-animate">CONTACT</button>
+        <button class="menu-item menu-item-animate">Contact</button>
         </div>   
     </div>
 </section>

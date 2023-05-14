@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 //animation imports
 import { trigger, state, style, animate, transition, query, stagger } from '@angular/animations';
@@ -7,45 +7,39 @@ import { trigger, state, style, animate, transition, query, stagger } from '@ang
   selector: 'app-hero',
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css'],
+
   animations: [
     trigger('heroAnimation',
-    [
-    transition(':enter',
-    [
-      style({opacity: 0}),
-      animate('4.0s 250ms ease-in', style({opacity: 0.9}))
-    ]
-  ),
-  transition(':leave',
-    [
-      style({opacity: 0.9}),
-      animate('0.5s', style({opacity: 0}))
-    ]
-    ),
-  ]
-  ),
-  trigger('heroAnimation2',
-  [
-    transition(':enter',
-    [
-      query('.hero-text-anim',
       [
-        style({opacity: 0}),
-        stagger(100, 
-          [
-            animate('2.0s 250ms ease-in', style({opacity: 0.9}))
-          ]
-          )
+        state('true', style({ opacity: 1})),
+        state('false', style({ opacity: 0 })),
+        transition('false => true', animate('4.0s 250ms ease-in'))
+      ]
+    ),
+    trigger('heroAnimation2',
+    [
+      transition(':enter',
+      [
+        query('.hero-text-anim',
+        [
+          style({opacity: 0}),
+          stagger(125, 
+            [
+              animate('2.0s 250ms ease-in', style({opacity: 1.0}))
+            ]
+            )
+        ]
+        )
       ]
       )
     ]
     )
-  ]
-  )
-  ],
+    ],
 })
+    
 export class HeroComponent implements OnInit {
 
+  @Input() animations: boolean = false;
 
   ngOnInit(): void {
     /*

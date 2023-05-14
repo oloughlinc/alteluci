@@ -6,11 +6,9 @@
     height: 100vh;
 
     display: grid;
-    /*grid-template-rows: 1fr 5fr 2fr;*/
     grid-template-rows: 25px 100px 8fr 1fr;
     overflow-y: hidden;
 }
-
 
 
 .menu-logo {
@@ -77,8 +75,8 @@
     border: none;
     color: grey;
     font-size: 55px;
-    font-family: 'Libre Caslon Text', serif;
-    padding-bottom: 40px;
+    font-family: 'Alegreya', serif;
+    padding-bottom: 30px;
 }
 
 .menu-item:hover {

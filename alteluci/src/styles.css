@@ -4,6 +4,7 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
 @font-face {
     font-family: 'Gotham Book';
     src: url('./assets/fonts/gotham-book-webfont.woff2') format('woff2');
@@ -14,7 +15,8 @@ section {
     width: 100vw;
     max-width: 100%;
     display: grid;
-    grid-template-columns: minmax(50px, 1fr) 50px minmax(200px, 550px) minmax(500px, 550px) 50px minmax(50px, 1fr);
+    /*grid-template-columns: minmax(50px, 1fr) 50px minmax(200px, 550px) minmax(500px, 550px) 50px minmax(50px, 1fr);*/
+    grid-template-columns: 10% 50px minmax(200px, 1fr) minmax(500px, 1fr) 50px 10%;
 }
 
 @media screen and (max-width:1000px) {

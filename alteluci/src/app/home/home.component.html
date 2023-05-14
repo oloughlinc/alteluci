@@ -1,13 +1,13 @@
-
-<div class="scroll-parent" [ngClass]="{'lock-scroll': showMenu}">
-<app-menu *ngIf="showMenu" (onBackClicked)="toggleMenu($event)" ></app-menu>
-<app-hero (onMenuClicked)="toggleMenu($event)"></app-hero>
-<app-honey-honey></app-honey-honey>
-<app-process></app-process>
-<app-featured></app-featured>
-<app-contact></app-contact>
 <!--
-<section class="background-leaf">
-</section>
+<app-entry (entryComplete)="entryCompleted=true"></app-entry>
 -->
+
+<div [ngClass]="{'parallax-frame': !showMenu, 'lock-scroll': showMenu}">
+    <app-menu (onBackClicked)="toggleMenu($event)" [showMenu]="showMenu"></app-menu>
+    <div class="parallax-front"><img class="honey-leaves" src="../../assets/images/honey-leaves.png"></div>
+    <app-hero (onMenuClicked)="toggleMenu($event)" [animations]="animationStart"></app-hero>
+    <app-honey-honey></app-honey-honey>
+    <app-process></app-process>
+    <app-featured></app-featured>
+    <app-contact></app-contact>
 </div>

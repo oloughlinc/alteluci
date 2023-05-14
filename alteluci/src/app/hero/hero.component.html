@@ -1,8 +1,8 @@
 <section class="top-banner">
-    <div class="white-box" [@heroAnimation]></div>
+    <div class="white-box" [@heroAnimation]="animations ? true : false"></div>
     <div class="logo"><img class="logo-img" src="../../assets/images/logo.png"></div>
     <div class="menu"><button class="menu-butt" (click)="onMenuButton()">MENU</button></div>
-    <div class="top-banner-splash" [@heroAnimation2]>
+    <div *ngIf="animations" class="top-banner-splash" [@heroAnimation2]>
         <p class="top-banner-splash-text hero-text-anim">DEEANDRA<br>& SAMUEL</p>
         <!--
         <p class="top-banner-splash-text-underlay hero-text-anim">LOS ANGELES, USA</p>

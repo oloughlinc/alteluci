@@ -12,9 +12,47 @@
 
 </head>
 <body class="mat-typography">
-  <app-root>
-    <div style="background-image: url('./assets/images/Loading.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh; width: 100vw;">
+  <style>
+    .loading-splash {
+      height: 100vh;
+      width: 100vw;
+      max-width: 100%;
+      background-color: rgb(134, 110, 94);
+      position:fixed;
+      z-index:99999999;
+      transition: opacity 2s;
+    }
+
+    .loading-logo {
+      margin: 0 auto;
+      top:0;
+      bottom:0;
+      padding-top: 40vh;
+      width: fit-content;
+      height: fit-content;
+      font-family: 'Libre Caslon Text';
+      color: burlywood;
+      font-size: 6vw;
+      align-content: center;
+      text-align: center;
+      color: rgb(173, 149, 133);
+  
+    }
+
+    .loading-complete {
+      opacity: 0;
+    }
+
+  </style>
+  <div class="loading-splash">
+    <div class="loading-logo">
+    <img src="./assets/images/logo.png">
+    <br>
+    ALTELUCI
     </div>
+  </div>
+  <app-root>
+    
   </app-root>
 </body>
 </html>

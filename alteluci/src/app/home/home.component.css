@@ -8,31 +8,55 @@ body {
     box-sizing: border-box;
 }
 
-/*
-.lock-scroll { 
+/* locks but also removes scrollbar, misaligning overlaid menu (since it depends on viewport width) 
+.lock-scroll2 { 
     overflow: hidden; 
     height: 100vh;
     width: 100%;
-}*/
+}
+*/
 
+/* locks but keeps a disabled scrollbar, 99% fixes overlay alignment issues */
 .lock-scroll {
     position: fixed;
     overflow-y: scroll;
     width: 100%;
 }
 
-
-.background-leaf {
-   
-    background-image: url('leaves.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    position: fixed;
-
-    z-index: -999;
-    height: 1000px;
-    width: 100vh;
-
+.parallax-frame {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    position: relative;
+    overflow-y: auto;
+    height: 100vh;
+    overflow-x: hidden;
 }
+
+.scroll-parent {
+    transform: translateZ(0);
+}
+
+.parallax-front {
+    position: absolute;
+    right:0;
+    top: 0;
+    margin-top: max(600px, 100vh);
+    transform: translateZ(-1px) translateX(25vw) translateY(10vw) scale(2);
+    mix-blend-mode: multiply;
+}
+
+@media screen and (max-width: 700px) {
+    .parallax-front {
+        width: 50px;
+        height: 75px;
+        transform: translateZ(-1px) translateX(-100vw) translateY(10vw) scale(1);
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    .parallax-front {
+        transform: translateZ(-1px) translateX(-150vw) translateY(10vw) scale(1);
+    }
+    
+}
+

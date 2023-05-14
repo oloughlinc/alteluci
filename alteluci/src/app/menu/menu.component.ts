@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 //animation imports
 import { trigger, state, style, animate, transition, query, stagger, group } from '@angular/animations';
 
@@ -7,7 +7,6 @@ import { trigger, state, style, animate, transition, query, stagger, group } fro
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
   animations: [
-    //put in home component to trigger :leave properly
     trigger('menuAnimation',
     [
       transition(':enter',
@@ -18,8 +17,8 @@ import { trigger, state, style, animate, transition, query, stagger, group } fro
       ),
       transition(':leave',
         [
-          style({opacity: 1.0}),
-          animate('1.0s', style({opacity: 0}))
+          style({opacity: 1.0, width: '100vw', 'max-width': '110%'}),
+          animate('0.25s', style({opacity: 0}))
         ]
       ),
     ]
@@ -44,12 +43,14 @@ import { trigger, state, style, animate, transition, query, stagger, group } fro
         ]
         )
       ]
-      )
+      ),
     ]
     ),
   ]
 })
 export class MenuComponent {
+
+  @Input() showMenu: boolean = false;
 
   @Output() onBackClicked = new EventEmitter<boolean>;
   public onBackButton() {

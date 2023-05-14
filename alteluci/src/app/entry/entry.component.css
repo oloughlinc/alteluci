@@ -1,0 +1,9 @@
+.entry-splash {
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+    background-image: url(../../assets/images/Loading.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

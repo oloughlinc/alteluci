@@ -21,6 +21,7 @@ import { VideoWrapperComponent } from './video-wrapper/video-wrapper.component';
 import { ContactComponent } from './contact/contact.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MenuComponent } from './menu/menu.component';
+import { EntryComponent } from './entry/entry.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { MenuComponent } from './menu/menu.component';
     VideoWrapperComponent,
     ContactComponent,
     MenuComponent,
+    EntryComponent,
   ],
   imports: [
     BrowserModule,
