@@ -1,3 +1,21 @@
+.border {
+    position: absolute;
+    box-sizing: border-box;
+    height: 25%;
+    width:100%;
+    background-color: black;
+    background-color: beige;
+    opacity: 0.95;
+    z-index:99;
+}
+
+.b-top {
+    top:0;
+}
+
+.b-bot {
+    bottom: 0;
+}
 
 .bg-vid-container {
     height: 100%;
@@ -36,8 +54,12 @@
     z-index: 6;
 }
 .logo-img {
+    /*
     height: 53px;
     width: 45px;
+    */
+    height: 83px;
+    width: 70px;
 }
 
 .logo-banner {
@@ -58,7 +80,8 @@
 
     height: max(100vh, 600px);
     min-height: 500px;
-    grid-template-rows: 25px 100px 8fr 1fr;
+    /*grid-template-rows: 25px 100px 8fr 1fr;*/
+    grid-template-rows: 25px 100px 1fr 25%;
     
 
     position: relative;

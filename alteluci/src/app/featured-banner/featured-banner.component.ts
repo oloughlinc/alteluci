@@ -4,9 +4,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { trigger, state, style, animate, transition, query, stagger } from '@angular/animations';
 
 @Component({
-  selector: 'app-hero',
-  templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css'],
+  selector: 'app-featured-banner',
+  templateUrl: './featured-banner.component.html',
+  styleUrls: ['./featured-banner.component.css'],
 
   animations: [
     trigger('heroAnimation',
@@ -36,10 +36,13 @@ import { trigger, state, style, animate, transition, query, stagger } from '@ang
     )
     ],
 })
-    
-export class HeroComponent implements OnInit {
+export class FeaturedBannerComponent implements OnInit{
 
-  @Input() animations: boolean = false;
+  @Input() animations: boolean = true;
+  @Input() splashText: string = "";
+  @Input() splashUnder: string = "";
+  @Input() bgImg: any = null;
+  public underlay: string[] = [];
 
   ngOnInit(): void {
     /*
@@ -49,16 +52,12 @@ export class HeroComponent implements OnInit {
     })
     console.log(this.underlay);
     */
+   this.underlay = this.splashUnder.split("");
   }
 
   @Output() onMenuClicked: EventEmitter<boolean> = new EventEmitter();
   public onMenuButton() {
     this.onMenuClicked.emit(true);
   }
-
-
-  //private text = "LOS ANGELES, USA";
-  private text = "Wedding Filmography"
-  public underlay = this.text.split("");
 
 }

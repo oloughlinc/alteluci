@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { SlideComponent } from './slide/slide.component';
 import { FadeComponent } from './fade/fade.component';
 import { HoneyHoneyComponent } from './honey-honey/honey-honey.component';
@@ -22,6 +23,8 @@ import { ContactComponent } from './contact/contact.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MenuComponent } from './menu/menu.component';
 import { EntryComponent } from './entry/entry.component';
+import { HeroVidComponent } from './hero-vid/hero-vid.component';
+import { FeaturedBannerComponent } from './featured-banner/featured-banner.component';
 
 
 @NgModule({
@@ -38,6 +41,8 @@ import { EntryComponent } from './entry/entry.component';
     ContactComponent,
     MenuComponent,
     EntryComponent,
+    HeroVidComponent,
+    FeaturedBannerComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +53,7 @@ import { EntryComponent } from './entry/entry.component';
     MatFormFieldModule,
     MatNativeDateModule,
     MatIconModule,
+    MatProgressBarModule
   ],
   exports: [
   ],

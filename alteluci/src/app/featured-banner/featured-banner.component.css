@@ -1,23 +1,4 @@
 
-.bg-vid-container {
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    max-width: 100%;
-    position: absolute;
-    z-index: -1;
-}
-
-.bg-vid {
-    height: 1200px;
-    width: 2200px;
-    transform: translateX(-200px);
-    margin: 0;
-    padding: 0;
-}
-
 .white-box {
     grid-column-start: 3;
     grid-column-end: 5;
@@ -29,11 +10,15 @@
     opacity: 0.1;
 }
 
-.logo {
-    grid-column-start: 2;
+.featured-banner-container {
+    grid-column-start: 3;
+    grid-column-end: 4;
     grid-row-start: 2;
-    place-self: center;
+    align-self: center;
     z-index: 6;
+    color: white;
+    font-family: 'Libre Calson Text', serif;
+    font-size: 42px;
 }
 .logo-img {
     height: 53px;
@@ -165,7 +150,6 @@
     background: none; 
     border: none; 
     color: rgb(173, 149, 133); 
-    color: white;
     font-size: 18px;
 }
 

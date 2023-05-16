@@ -1,0 +1,14 @@
+<section class="top-banner" [ngStyle]="{ 'background-image': 'url(' + bgImg + ')'}">
+
+
+    <div class="white-box" [@heroAnimation]="animations ? true : false"></div>
+    <div class="featured-banner-container">FEATURED</div>
+    <div *ngIf="animations" class="top-banner-splash" [@heroAnimation2]>
+
+        <p class="top-banner-splash-text hero-text-anim">{{splashText}}</p>
+        <div class="top-banner-splash-text-underlay">
+            <p *ngFor="let letter of underlay" class="hero-text-anim inline-letters">{{letter}}</p>
+        </div>
+    </div>
+</section>
+

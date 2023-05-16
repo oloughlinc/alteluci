@@ -1,12 +1,12 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 //animation imports
 import { trigger, state, style, animate, transition, query, stagger } from '@angular/animations';
 
 @Component({
-  selector: 'app-hero',
-  templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css'],
+  selector: 'app-hero-vid',
+  templateUrl: './hero-vid.component.html',
+  styleUrls: ['./hero-vid.component.css'],
 
   animations: [
     trigger('heroAnimation',
@@ -36,8 +36,7 @@ import { trigger, state, style, animate, transition, query, stagger } from '@ang
     )
     ],
 })
-    
-export class HeroComponent implements OnInit {
+export class HeroVidComponent {
 
   @Input() animations: boolean = false;
 

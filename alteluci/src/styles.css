@@ -19,7 +19,7 @@ section {
     grid-template-columns: 10% 50px minmax(200px, 1fr) minmax(500px, 1fr) 50px 10%;
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1060px) {
     section {
         grid-template-columns: minmax(50px, 1fr) 50px minmax(125px, 310px) minmax(375px, 310px) 50px minmax(50px, 1fr);
     }

@@ -1,24 +1,36 @@
 <section class="top-banner">
     <div class="bg-vid-container">
         
-
+<!--
         <object class="bg-vid" data="https://player.vimeo.com/video/821962936?h=8f89419cc4&autoplay=1&background=1&loop=1" allow="autoplay"></object>
-
-        <!--
+  -->
+        
         <object class="bg-vid" data="https://player.vimeo.com/video/734840039?h=6387935871&autoplay=1&background=1&loop=1" allow="autoplay"></object>
-        -->
+      
+
     
     </div>
+    <!--
+    <div class="border b-top"></div>
+    
+    <div class="border b-bot"></div>-->
 
 
-    <div class="white-box" [@heroAnimation]="animations ? true : false"></div>
-    <div class="logo"><img class="logo-img" src="../../assets/images/logo-white-butt.png"></div>
+    <!--
+    <div class="white-box" [@heroAnimation]="animations ? true : false"></div-->
+    <div class="logo"></div>
     <div class="menu"><button class="menu-butt" (click)="onMenuButton()">MENU</button></div>
     <div *ngIf="animations" class="top-banner-splash" [@heroAnimation2]>
         <!--
         <p class="top-banner-splash-text hero-text-anim">DEEANDRA<br>& SAMUEL</p>
         -->
-        <p class="top-banner-splash-text hero-text-anim">ALTELUCI</p>
+        <p class="top-banner-splash-text hero-text-anim">
+            <!--
+            <img class="logo-img" src="../../assets/images/logo-white-butt.png" style="display: inline; height:90px; width: 70px; padding-right: 30px;">
+            -->
+            <img class="logo-img" src="../../assets/images/logo.png" style="padding-right: 30px;">
+            ALTELUCI
+            </p>
         <!--
         <p class="top-banner-splash-text-underlay hero-text-anim">LOS ANGELES, USA</p>
         -->
