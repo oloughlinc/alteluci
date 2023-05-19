@@ -23,8 +23,18 @@ export class ContactComponent implements OnInit {
     })
   }
 
-  public onSubmit(formData: FormData) {
-
+  public onSubmit() {
+    this.submitClicked = true;
+    if (this.formData.valid) {
+      console.log(this.formData.value);
+    } else {
+      // console.log("not valid");
+    }
   }
+
+  // this little baby is a formdata handle for the html
+  get f() { return this.formData.controls; }
+
+  public submitClicked = false;
 
 }

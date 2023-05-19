@@ -5,20 +5,23 @@
 <div [ngClass]="{'parallax-frame': !showMenu, 'lock-scroll': showMenu}">
     <app-menu (onBackClicked)="toggleMenu($event)" [showMenu]="showMenu"></app-menu>
     <div class="parallax-front"><img class="honey-leaves" src="../../assets/images/honey-leaves.png"></div>
-    <!--
+   <!-- 
     <app-hero-vid (onMenuClicked)="toggleMenu($event)" [animations]="animationStart"></app-hero-vid>
     
     <section style="height:25vh; background-color: black;"></section>
     -->
+
     
     <app-honey-honey></app-honey-honey>
-    <app-featured-banner [splashText]="'deeandra + samuel'" [splashUnder]="'Los Angeles, USA'" [bgImg]="'../../assets/images/beach.png'"></app-featured-banner>
-    <app-featured-banner [splashText]="'nausicaa + sirvan'" [splashUnder]="'12 / 08 / 2018'" [bgImg]="'../../assets/images/feature-still-warwick.png'"></app-featured-banner>
-    <app-featured-banner [splashText]="'rosa + ivano'" [splashUnder]="'42 511E 11 042E'" [bgImg]="'../../assets/images/feature-still-rosa.png'"></app-featured-banner>
-    <app-featured-banner [splashText]="'taylor + nathan'" [splashUnder]="'THEY WILL BE WARM'" [bgImg]="'../../assets/images/feature-still-nathan.png'"></app-featured-banner>
-    
+    <!--
+    <app-featured-works-container></app-featured-works-container>
+    -->
+
     <app-process></app-process>
-    
     <app-featured></app-featured>
+    
+    
+    
+    
     <app-contact></app-contact>
 </div>

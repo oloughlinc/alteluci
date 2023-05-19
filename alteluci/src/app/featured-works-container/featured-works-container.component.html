@@ -1,0 +1,12 @@
+<section class="featured-container">
+    <div class="feat-1">
+        <button class="banner r" (click)="onFeatChangeRightClick()">></button>
+        <button class="banner l" (click)="onFeatChangeLeftClick()" ><</button>
+        <div class="feat-cont">
+    <app-featured-banner *ngIf="featNum === 0" [splashText]="'deeandra + samuel'" [splashUnder]="'LOS ANGELES, USA'" [bgImg]="'../../assets/images/beach.png'"></app-featured-banner>
+    <app-featured-banner *ngIf="featNum === 1" [splashText]="'nausicaa + sirvan'" [splashUnder]="'12 / 08 / 2018'" [bgImg]="'../../assets/images/feature-still-warwick.png'"></app-featured-banner>
+    <app-featured-banner *ngIf="featNum === 2" [splashText]="'rosa + ivano'" [splashUnder]="'42 511E 11 042E'" [bgImg]="'../../assets/images/feature-still-rosa.png'"></app-featured-banner>
+    <app-featured-banner *ngIf="featNum === 3" [splashText]="'taylor + nathan'" [splashUnder]="'THEY WILL BE WARM'" [bgImg]="'../../assets/images/feature-still-nathan.png'"></app-featured-banner>
+        </div>
+    </div>
+</section>

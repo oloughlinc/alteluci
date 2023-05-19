@@ -5,22 +5,26 @@
         <p class="contact-label-text">CONTACT /<br>CONTATTAMI</p>
     </div>
 
-    <form class="contact-form" [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
+    <form class="contact-form" [formGroup]="formData" (ngSubmit)="onSubmit()">
 
         <div>
-            <input class="form-field" type="text" name="Name" placeholder="NAME & PARTNERS NAME" formControlName="Name">
+            <input class="form-field" [ngClass]="{ 'form-invalid': submitClicked && f['Name'].errors }" 
+            type="text" name="Name" placeholder="NAME & PARTNERS NAME" formControlName="Name">
         </div>
 
         <div>
-            <input class="form-field" type="email" name="Email" placeholder="EMAIL" formControlName="Email">
+            <input class="form-field" [ngClass]="{ 'form-invalid': submitClicked && f['Email'].errors }" 
+            type="email" name="Email" placeholder="EMAIL" formControlName="Email">
         </div>
 
         <div>
-            <input class="form-field" type="text" name="Phone" placeholder="PHONE NUMBER (IF YOU WANT)" formControlName="Phone">
+            <input class="form-field" [ngClass]="{ 'form-invalid': submitClicked && f['Phone'].errors }"
+            type="text" name="Phone" placeholder="PHONE NUMBER (IF YOU WANT)" formControlName="Phone">
         </div>
 
         <div style="position: relative; width:100%;">
-            <input class="form-field" matInput [matDatepicker]="picker" placeholder="EVENT DATE" name="Date" formControlName="Date">
+            <input class="form-field" [ngClass]="{ 'form-invalid': submitClicked && f['Date'].errors }"
+            matInput [matDatepicker]="picker" placeholder="EVENT DATE" name="Date" formControlName="Date">
             <div class="picker-icon-container">
                 <mat-datepicker-toggle [for]="picker">
                     
@@ -34,7 +38,8 @@
 
         <div>
             <div style="padding-top: 15px;"><label class="who-are-you" for="About">WHO ARE YOU?</label></div>
-            <textarea class="form-field-textarea" type="textarea" name="About" placeholder="{{deets}}" formControlName="Name"></textarea>
+            <textarea class="form-field-textarea" [ngClass]="{ 'form-invalid': submitClicked && f['About'].errors }"
+            type="textarea" name="About" placeholder="{{deets}}" formControlName="About"></textarea>
         </div>
 
         <div>

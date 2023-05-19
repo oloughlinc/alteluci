@@ -1,0 +1,52 @@
+.featured-container {
+    height: 80vh;
+    background-color: bisque;
+    background-color: black;
+    background-color: rgb(126, 114, 91);
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+}
+
+.feat-1 {
+
+    align-self: center;
+    justify-self: center;
+    width: 1200px;
+    height: 100%;
+    position: relative;
+    opacity: 1 !important;
+}
+
+
+.banner {
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    padding:0;
+    margin: 0;
+    z-index: 999999;
+
+    align-self: center;
+
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: white;
+
+}
+
+.banner:hover {
+    background: gray;
+    opacity: 0.2;
+}
+
+.l {
+    left:0;
+}
+
+.r {
+    right:0;
+}

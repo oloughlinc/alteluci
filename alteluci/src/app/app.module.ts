@@ -25,6 +25,7 @@ import { MenuComponent } from './menu/menu.component';
 import { EntryComponent } from './entry/entry.component';
 import { HeroVidComponent } from './hero-vid/hero-vid.component';
 import { FeaturedBannerComponent } from './featured-banner/featured-banner.component';
+import { FeaturedWorksContainerComponent } from './featured-works-container/featured-works-container.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { FeaturedBannerComponent } from './featured-banner/featured-banner.compo
     EntryComponent,
     HeroVidComponent,
     FeaturedBannerComponent,
+    FeaturedWorksContainerComponent,
   ],
   imports: [
     BrowserModule,
