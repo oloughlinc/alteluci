@@ -1,6 +1,24 @@
 .vid-player {
-    width: 500px; 
-    height: 280px;
+    /*
+    width: 1200px; 500
+    height: 693px; 280 */
+    
+    width: 1050px;
+    height: 606px;
+}
+
+@media screen and (max-width: 1750px) {
+    .vid-player {
+        width: 800px;
+        height: 468px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .vid-player {
+        width: 500px;
+        height: 280px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -18,5 +36,5 @@
 }
 
 .highlight-hover:hover{
-    opacity:0.6;
+    opacity:0.8;
 }

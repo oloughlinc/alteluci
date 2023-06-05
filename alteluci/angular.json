@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "keen-slider/keen-slider.min.css",
               "src/custom-theme.scss",
               "src/styles.css"
             ],

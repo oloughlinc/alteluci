@@ -77,7 +77,7 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    height: max(75vh, 600px);
+    height: max(100vh, 200px);
     min-height: 500px;
     /*grid-template-rows: 25px 100px 8fr 1fr;*/
     grid-template-rows: 25px 100px 1fr 25%;

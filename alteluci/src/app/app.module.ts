@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { RouterModule, Routes } from '@angular/router';
+
 //material stuff
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -26,6 +28,8 @@ import { EntryComponent } from './entry/entry.component';
 import { HeroVidComponent } from './hero-vid/hero-vid.component';
 import { FeaturedBannerComponent } from './featured-banner/featured-banner.component';
 import { FeaturedWorksContainerComponent } from './featured-works-container/featured-works-container.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FeaturedCarouselComponent } from './featured-carousel/featured-carousel.component';
 
 
 @NgModule({
@@ -45,6 +49,7 @@ import { FeaturedWorksContainerComponent } from './featured-works-container/feat
     HeroVidComponent,
     FeaturedBannerComponent,
     FeaturedWorksContainerComponent,
+    FeaturedCarouselComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,9 @@ import { FeaturedWorksContainerComponent } from './featured-works-container/feat
     MatFormFieldModule,
     MatNativeDateModule,
     MatIconModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    HttpClientModule,
+    RouterModule,
   ],
   exports: [
   ],

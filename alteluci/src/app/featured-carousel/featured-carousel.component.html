@@ -1,0 +1,58 @@
+<section class="featured-carousel-sec">
+
+    <!-- background images as separate tags in order to target opacity in browser -->
+    <img class="featured-bg" src="../../assets/images/featured-texture.png">
+    <img class="featured-cursive" src="../../assets/images/featured-cursive.png">
+
+    <div class="featured-splash">
+
+        <img src="../../assets/images/logo.png" style="right: 0; position: absolute; padding-top: 30px;">
+
+        <div>
+            FEATURED WORKS
+        </div>
+        <div style="font-size: 48px; padding-left: 30%;">
+            OPERE D'ARTE
+        </div>
+
+        <hr class="featured-hr">
+
+        <div class="featured-underlay">
+            <p style="float:left; width:48%; padding-right: 4%;">We have over 5 years of experience filming weddings. Our videos invoke nostalgia and will transport you back to that special day.</p>
+            <p style="float:right; width:47%;">Abbiamo oltre 5 anni di esperienza nelle riprese di matrimoni. I nostri video richiamano la nostalgia e ti riporteranno a quel giorno speciale.</p>
+        </div>
+        <br>
+
+        <div class="carousel-button-container">
+            <button style="left:0;" (click)="slider.prev()"><</button>
+            <button style="right:0;" (click)="slider.next()">></button>
+        </div>
+    </div>
+    <div class="vid-carousel-container">
+        <div class="keen-slider keen-slider--vertical" #sliderRef>
+            <!--
+            <div [ngClass]="{'not-active-slide': currentSlide != 0}" class="keen-slider__slide number-slide1">1</div>
+            <div [ngClass]="{'not-active-slide': currentSlide != 1}" class="keen-slider__slide number-slide2">2</div>
+            <div [ngClass]="{'not-active-slide': currentSlide != 2}" class="keen-slider__slide number-slide3">3</div>
+            <div [ngClass]="{'not-active-slide': currentSlide != 3}" class="keen-slider__slide number-slide4">4</div>
+            <div [ngClass]="{'not-active-slide': currentSlide != 4}" class="keen-slider__slide number-slide5">5</div>
+            <div [ngClass]="{'not-active-slide': currentSlide != 5}" class="keen-slider__slide number-slide6">6</div>
+            -->
+            <div [ngClass]="{'not-active-slide': currentSlide != 0}" class="keen-slider__slide">
+                <app-video-wrapper link="https://player.vimeo.com/video/734840039?h=6387935871&autoplay=1" image="../../assets/images/vid-still-carmel.png"></app-video-wrapper>
+            </div>
+            <div [ngClass]="{'not-active-slide': currentSlide != 1}" class="keen-slider__slide">
+                <app-video-wrapper link="https://player.vimeo.com/video/449583234?h=282310f01a&autoplay=1" image="../../assets/images/vid-still-puglia.png"></app-video-wrapper>
+            </div>
+            <div [ngClass]="{'not-active-slide': currentSlide != 2}" class="keen-slider__slide">
+                <app-video-wrapper link="https://player.vimeo.com/video/255681902?h=73b2f72841&autoplay=1" image="../../assets/images/vid-still-warwick.png"></app-video-wrapper>
+            </div>
+            <div [ngClass]="{'not-active-slide': currentSlide != 3}" class="keen-slider__slide">
+                <app-video-wrapper link="https://player.vimeo.com/video/443916730?h=c75627ed40&autoplay=1" image="../../assets/images/vid-still-queens.png" [darkPlayButton]="true"></app-video-wrapper>
+            </div>
+          </div>
+    
+    </div>
+    
+
+</section>

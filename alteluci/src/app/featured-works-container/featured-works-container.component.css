@@ -1,9 +1,5 @@
 .featured-container {
     height: 80vh;
-    background-color: bisque;
-    background-color: black;
-    background-color: rgb(126, 114, 91);
-    opacity: 0.8;
     background-repeat: no-repeat;
     background-size: cover;
     display:flex;

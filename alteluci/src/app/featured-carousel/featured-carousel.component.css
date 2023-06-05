@@ -1,0 +1,139 @@
+.featured-carousel-sec {
+    height: 1400px;
+    background-color: rgb(250, 249, 245);
+    /*
+    background-image: url("../../assets/images/featured-texture.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
+
+    /* in this section: bad practice but slightly different vertical margins */
+    grid-template-columns: 10% 50px minmax(200px, 1fr) minmax(500px, 1fr) 150px 10%;
+    grid-template-rows: 10% 1fr 4fr 5%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.featured-bg {
+    position: absolute;
+    height: 150vh;
+    width: 100%;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.featured-cursive {
+    opacity: 0.2;
+    transform: translateX(-50px) translateY(-50px);
+}
+
+.featured-splash {
+    font-size:62px; 
+    font-family: 'Alegreya', serif;
+    letter-spacing: 3px;
+    color: rgb(134, 110, 94);
+
+    height: fit-content;
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    z-index: 99;
+
+    position: relative;
+
+}
+
+.featured-hr {
+    width: 100%;
+    border: 1px solid rgb(134, 110, 94);
+}
+
+.featured-underlay {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: normal;
+    float: right;
+    width: 90%;
+    height: fit-content;
+}
+
+.carousel-button-container {
+    float: right;
+    width: 150px;
+    margin-top: 25px;
+    margin-right: 20px;
+    position: relative;
+    height: 100px;
+}
+
+.carousel-button-container button {
+    height: 100%;
+    width: 30%;
+    background: none;
+    border: none;
+    color: rgb(134, 110, 94);
+    font-size: 90px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+}
+
+.carousel-button-container button:hover {
+    transform: scale(1.05);
+}
+
+.carousel-button-container button:active {
+    opacity: 0.9;
+}
+
+.vid-carousel-container {
+    grid-row-start: 3; 
+    grid-column-start: 1; 
+    grid-column-end: 7; 
+    width: 120vw;
+    min-width: 1800px; 
+    margin-top: 50px; 
+    transform: translateX(0);
+    z-index: 99; 
+}
+
+.not-active-slide {
+  opacity: 0.75;
+  height: 450px;
+  margin-top: 50px;
+  transition: height 2000ms ease;
+}
+
+@media screen and (max-width: 1750px) {
+
+    .not-active-slide {
+        opacity: 0.75;
+        height: 350px;
+        margin-top: 50px;
+        transition: height 2000ms ease;
+      }
+    
+}
+
+@media screen and (max-width: 1305px) {
+
+    .vid-carousel-container {
+        width: 100vw !important;
+        min-width: 1000px !important;
+        margin-left: 16vw;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+
+    .vid-carousel-container {
+        margin-left: 0 !important;
+    }
+    
+    .not-active-slide {
+        opacity: 0.75;
+        height: 200px;
+        margin-top: 50px;
+        transition: height 2000ms ease;
+      }
+}
