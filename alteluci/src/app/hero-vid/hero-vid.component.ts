@@ -23,7 +23,7 @@ import { trigger, state, style, animate, transition, query, stagger } from '@ang
         query('.hero-text-anim',
         [
           style({opacity: 0}),
-          stagger(125, 
+          stagger(75, 
             [
               animate('2.0s 250ms ease-in', style({opacity: 1.0}))
             ]
@@ -57,7 +57,7 @@ export class HeroVidComponent {
 
 
   //private text = "LOS ANGELES, USA";
-  private text = "Wedding Filmography"
+  private text = "DOCUMENTARY WEDDING FILMS"
   public underlay = this.text.split("");
 
 }

@@ -5,6 +5,9 @@
     
     width: 1050px;
     height: 606px;
+
+    width: 800px;
+    height: 468px;
 }
 
 @media screen and (max-width: 1750px) {

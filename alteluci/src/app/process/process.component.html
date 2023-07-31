@@ -4,21 +4,22 @@
     <img class="process-flowers" src="../../assets/images/process-flowers.png">
     <img class="process-cursive" src="../../assets/images/process-cursive.png">
 
-    <div class="process-text-block">
-        <p class="process-text-label">PROCESS / PROCESSI</p>
-        <p class="process-text">Did you ever hear the tragedy of Darth Plageuis the Wise?</p>
-        <p class="process-text">I thought not.</p>
-        <p class="process-text">It is not a story the Jedi would tell you.</p>
-        <br>
-        <p class="process-text">He was so powerful...</p>
-        <p class="process-text">the only thing he was afraid of was losing his power,</p>
-        <p class="process-text">which eventually, of course, he did.</p>
-        <br>
-        <p class="process-text">Unfortunately, he taught his apprentice everything he knew,</p>
-        <p class="process-text">then his apprentice killed him in his sleep.</p>
-        <br>
-        <p class="process-text">Ironic.</p>
-        <p class="process-text">He could save others from death, but not himself.</p>
+    <div class="process-text-block" #processText>
+        <div *ngIf="showText" @processTextAnim>
+            <p class="process-text-label process-text-anim"><u>THE PROCESS</u></p>
+            <p class="process-text-label process-text-anim"><u>ABOUT</u></p>
+            <p class="process-text-label process-text-anim"><u>DETAILS</u></p>
+            <p class="process-text process-text-anim">The documentary approach in filmmaking is to capture life as it honestly is. What makes your life unique among
+                                    all the others lies in the details.
+            </p>
+            <p class="process-text process-text-anim">The process on your wedding day is to preserve those intricate details. The inbetween moments, the atmosphere,
+                                    the way you look at one another on your wedding day and realize it's actually happening. These provide the authentic
+                                    capture of your love.
+            </p>
+            <p class="process-text process-text-anim">The story of your love, as it stands, right now- that you will be able to relive throughout the changing of time.</p>
+            <br>
+        </div>
+
 
     </div>
 

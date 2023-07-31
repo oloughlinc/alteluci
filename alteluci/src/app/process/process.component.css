@@ -19,7 +19,7 @@
 
     z-index: 999;
     position: absolute;
-    mix-blend-mode: multiply;
+    mix-blend-mode: normal;
 }
 
 .process-flowers {
@@ -47,14 +47,16 @@
 }
 
 .process-text-label {
-    font-size: 36px;
+    text-align: right;
+    font-size: 32px;
     font-family: 'Libre Caslon Text', serif;
+    opacity: 0.9;
 }
 
 .process-text {
-    padding-left: 20px;
-    font-size: 12;
-    font-family: 'Gotham Book';
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 0.7;
 }
 
 @media screen and (max-width: 1200px) {

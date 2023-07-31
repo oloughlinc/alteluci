@@ -1,6 +1,6 @@
 .featured-carousel-sec {
-    height: 1400px;
-    background-color: rgb(250, 249, 245);
+    height: 1000px;
+    background-color: rgba(250, 249, 245, 0);
     /*
     background-image: url("../../assets/images/featured-texture.png");
     background-repeat: no-repeat;
@@ -9,16 +9,32 @@
 
     /* in this section: bad practice but slightly different vertical margins */
     grid-template-columns: 10% 50px minmax(200px, 1fr) minmax(500px, 1fr) 150px 10%;
-    grid-template-rows: 10% 1fr 4fr 5%;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    grid-template-rows: 5% 1fr 5fr 5%;
+    overflow: visible;
+}
+
+.featured-logo {
+
+    display: block;
+    margin: auto;
+    width: 55px;
+    height: 65px;
+
+}
+
+.featured-opera-txt {
+    font-size: 48px; 
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 10px;
+
 }
 
 .featured-bg {
     position: absolute;
     height: 150vh;
     width: 100%;
-    opacity: 0.3;
+    opacity: 0.0;
     z-index: 0;
 }
 
@@ -34,17 +50,24 @@
     color: rgb(134, 110, 94);
 
     height: fit-content;
+    height: 400px;
     grid-row-start: 2;
     grid-column-start: 3;
-    grid-column-end: 5;
+    grid-column-end: 6;
     z-index: 99;
 
     position: relative;
+    margin-left: 15%;
+    margin-right: 15%;
+
+    padding-top: 100px;
 
 }
 
 .featured-hr {
     width: 100%;
+    padding: 0;
+    margin: 0;
     border: 1px solid rgb(134, 110, 94);
 }
 
@@ -52,29 +75,32 @@
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: normal;
-    float: right;
-    width: 90%;
-    height: fit-content;
+    margin: 0 auto;
+    text-align: left;
+    text-justify: left;
+    padding-top: 25px;
 }
 
 .carousel-button-container {
-    float: right;
-    width: 150px;
-    margin-top: 25px;
-    margin-right: 20px;
+    display: block;
+    margin:auto;
+    padding-top: 18px;
+    width: 120px;
     position: relative;
-    height: 100px;
+    height: 60px;
 }
 
 .carousel-button-container button {
     height: 100%;
-    width: 30%;
+    width: 49%;
     background: none;
     border: none;
     color: rgb(134, 110, 94);
-    font-size: 90px;
+    font-size: 60px;
+    display: inline-flex;
+    align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: absolute;
+
 }
 
 .carousel-button-container button:hover {
@@ -92,24 +118,30 @@
     width: 120vw;
     min-width: 1800px; 
     margin-top: 50px; 
-    transform: translateX(0);
+    transform: translateX(-125px);
     z-index: 99; 
+}
+
+.active-slide {
+    height: 468px !important;
+    margin-top: 0px;
+    opacity: 1.0
 }
 
 .not-active-slide {
   opacity: 0.75;
-  height: 450px;
+  height: 350px;
   margin-top: 50px;
-  transition: height 2000ms ease;
+}
+
+.slide-trans {
+    transition: height 0.75s, margin-top 0.75s, opacity 0.75s;
 }
 
 @media screen and (max-width: 1750px) {
 
     .not-active-slide {
-        opacity: 0.75;
         height: 350px;
-        margin-top: 50px;
-        transition: height 2000ms ease;
       }
     
 }
@@ -131,9 +163,87 @@
     }
     
     .not-active-slide {
-        opacity: 0.75;
         height: 200px;
-        margin-top: 50px;
-        transition: height 2000ms ease;
-      }
+    }
+
+    .featured-carousel-sec {
+        grid-template-columns: minmax(50px, 1fr) 50px minmax(125px, 310px) minmax(375px, 310px) 50px minmax(50px, 1fr);
+        grid-template-rows: 5% 2fr 1.3fr 5%;
+        height: 1200px;
+    }
+
+    .featured-splash {
+        width: 100%;
+    }
+
+    .featured-logo {
+        position: relative;
+        margin-left: 40%;
+    }
+
+    .vid-carousel-container {
+        margin-top: 35px;
+    }
+
+    .carousel-button-container {
+         margin-top: 0px;
+    }
+
+    .featured-underlay {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    .vid-carousel-container {
+        margin-left: 0vw;
+        transform: translateX(-70px);
+    }
+
+    .featured-splash {
+        font-size: 50px;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+
+    .featured-carousel-sec {
+        grid-template-columns: minmax(10%, 1fr) 30px minmax(114px, 220px) minmax(114px, 220px) 30px minmax(10%, 1fr);
+        grid-template-rows: 5% 2fr 1fr 5%;
+        height: 800px;
+    }
+
+    .featured-splash {
+        font-size: 30px;
+    }
+
+    .featured-opera-txt {
+        font-size: 20px;
+        padding-left: 0;
+    }
+
+    .featured-logo {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .featured-underlay {
+        font-size: 12px;
+        width: 100%;
+        float: left;
+    }
+
+    .vid-carousel-container {
+        margin-top: 0;
+        transform: translateX(-150px);
+        height: 200px;
+        width: 200vw !important;
+        min-width: 10px !important;
+        /*
+        margin-left: 10vw !important;
+        */
+    }
+    
 }

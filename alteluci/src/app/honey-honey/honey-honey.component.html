@@ -1,8 +1,8 @@
 <section class="honey-honey">
     <img class="honey-texture" src="../../assets/images/honey-texture.png">
-    <!--
+
     <img class="honey-leaves" src="../../assets/images/honey-leaves.png">
-    -->
+
 
     <div class="honey-img-container">
         <p class="lat-text rotate">38.8951 / -77.0364</p>
@@ -18,12 +18,14 @@
     </div>
 
     <img class="honey-logo" src="../../assets/images/logo.png">
-    <div class="honey-text">
-        <p class="honey-text-text">DOCUMENTARY WEDDING STYLE FILMMAKING.</p>
-        <p class="honey-text-text">HONEST NOSTALGIC CAPTURE.</p>
-        <hr class="honey-hr"><br>
-        <p class="honey-text-text" style="padding-top: 20px;">DOCUMENTARIO FILMMAKING IN STILE MATRIMONIO.</p>
-        <p class="honey-text-text">CATTURA ONESTA E NOSTALGICA.</p>
+    <div class="honey-text" #honeyText>
+        <div *ngIf='showText' @honeyTextAnim>
+            <p class="honey-text-text honey-text-anim">TELLING YOUR STORY WITH BEAUTIFUL IMAGERY.</p>
+            <p class="honey-text-text honey-text-anim">EMOTIONAL, AUTHENTIC, & NOSTALGIC CAPTURE.</p>
+            <hr class="honey-hr honey-text-anim"><br>
+            <p class="honey-text-text honey-text-anim" style="padding-top: 20px;">DOCUMENTARIO FILMMAKING IN STILE MATRIMONIO.</p>
+            <p class="honey-text-text honey-text-anim">CATTURA ONESTA E NOSTALGICA.</p>
+        </div>
     </div>
     <div class="honey-honey-text-container">
         <p class="honey-honey-text">HONEY HONEY</p>

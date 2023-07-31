@@ -1,7 +1,7 @@
 <section class="top-banner">
     <div class="bg-vid-container">
         
-   <!--     
+   <!--    testing 
         <object class="bg-vid" data="https://player.vimeo.com/video/821962936?h=8f89419cc4&autoplay=1&background=1&loop=1" allow="autoplay"></object>
 
    -->
@@ -18,8 +18,10 @@
 
     <!--
     <div class="white-box" [@heroAnimation]="animations ? true : false"></div-->
+        <!--
     <div class="logo"><img src="../../assets/images/logo-white-butt.png" height="53px" width="40px"></div>
     <div class="menu"><button class="menu-butt" (click)="onMenuButton()">MENU</button></div>
+        -->
     <div *ngIf="animations" class="top-banner-splash" [@heroAnimation2]>
         <!--
         <p class="top-banner-splash-text hero-text-anim">DEEANDRA<br>& SAMUEL</p>
@@ -36,7 +38,10 @@
         <p class="top-banner-splash-text-underlay hero-text-anim">LOS ANGELES, USA</p>
         -->
         <div class="top-banner-splash-text-underlay">
-            <p *ngFor="let letter of underlay" class="hero-text-anim inline-letters">{{letter}}</p>
+            <div *ngFor="let letter of underlay" class="hero-text-anim inline-letters">
+                <div *ngIf="letter===' '" style="min-width: 10px;"></div>
+                {{letter}}
+            </div>
         </div>
     </div>
 </section>

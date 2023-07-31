@@ -3,15 +3,15 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { trigger, state, style, animate, transition, query, stagger } from '@angular/animations';
 
 @Component({
-  selector: 'app-process',
-  templateUrl: './process.component.html',
-  styleUrls: ['./process.component.css'],
+  selector: 'app-super-eight',
+  templateUrl: './super-eight.component.html',
+  styleUrls: ['./super-eight.component.css'],
   animations: [
-    trigger('processTextAnim',
+    trigger('superTextAnim',
     [
       transition(':enter',
       [
-        query('.process-text-anim',
+        query('.super-text-anim',
         [
           style({opacity: 0}),
           stagger(200, 
@@ -27,29 +27,28 @@ import { trigger, state, style, animate, transition, query, stagger } from '@ang
     )
   ]
 })
-export class ProcessComponent {
+export class SuperEightComponent {
 
-  @ViewChild('processText') processText!: ElementRef;
+  @ViewChild('superText') superText!: ElementRef;
 
   showText: boolean = false;
 
   ngAfterViewInit() {
 
-    const threshold = 0.3;
+    const threshold = 0.1;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(
           (entry) => {
             if (entry.isIntersecting) {
               this.showText = true;
+              observer.disconnect();
             }
           }
         )
       }, { threshold }
     );
-    observer.observe(this.processText.nativeElement);
+    observer.observe(this.superText.nativeElement);
   }
-
-
 
 }

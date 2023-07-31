@@ -1,25 +1,25 @@
 <!--
 <app-entry (entryComplete)="entryCompleted=true"></app-entry>
 -->
-
+<div class="parallax-back">
+    <img class="parallax-cursive" src="../../assets/images/featured-cursive.png">
+</div>
 <div [ngClass]="{'parallax-frame': !showMenu, 'lock-scroll': showMenu}">
     <app-menu (onBackClicked)="toggleMenu($event)" [showMenu]="showMenu"></app-menu>
+    <!--
     <div class="parallax-front"><img class="honey-leaves" src="../../assets/images/honey-leaves.png"></div>
-    <app-hero></app-hero>
-       <!-- 
-    <app-hero-vid (onMenuClicked)="toggleMenu($event)" [animations]="animationStart"></app-hero-vid>
-
-    <section style="height:25vh; background-color: black;"></section>
     -->
+
+
+
+    <app-hero-vid (onMenuClicked)="toggleMenu($event)" [animations]="animationStart"></app-hero-vid>
 
     
     <app-honey-honey></app-honey-honey>
 
     <app-featured-carousel></app-featured-carousel>
-    <!--
-    <app-featured-works-container></app-featured-works-container>
-    -->
 
     <app-process></app-process>
+    <app-super-eight></app-super-eight>
     <app-contact></app-contact>
 </div>

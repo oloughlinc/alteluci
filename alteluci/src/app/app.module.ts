@@ -30,6 +30,7 @@ import { FeaturedBannerComponent } from './featured-banner/featured-banner.compo
 import { FeaturedWorksContainerComponent } from './featured-works-container/featured-works-container.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FeaturedCarouselComponent } from './featured-carousel/featured-carousel.component';
+import { SuperEightComponent } from './super-eight/super-eight.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { FeaturedCarouselComponent } from './featured-carousel/featured-carousel
     FeaturedBannerComponent,
     FeaturedWorksContainerComponent,
     FeaturedCarouselComponent,
+    SuperEightComponent,
   ],
   imports: [
     BrowserModule,

@@ -31,16 +31,21 @@ export class VideoWrapperComponent implements OnInit {
   public play = false;
   public playButton = "../../assets/images/butt-play.png";
   public urlLink!: SafeResourceUrl;
+  public vidName!: string;
 
+  @Input() name!: string;
   @Input() link!: string;
   @Input() image!: string;
   @Input() darkPlayButton!: boolean;
+
+  @Input() stopVid: boolean = false;
 
   ngOnInit(): void {
     if (this.darkPlayButton) {
       this.playButton = "../../assets/images/butt-play-drk.png"
     }
     this.urlLink = this.sanitizer.bypassSecurityTrustResourceUrl(this.link);
+    this.vidName = this.name;
   }
 
   constructor(private sanitizer: DomSanitizer) {
@@ -49,5 +54,14 @@ export class VideoWrapperComponent implements OnInit {
   public onPlayClick() {
     this.play = true;
   }
+
+  ngOnChanges() {
+    if (this.stopVid) {
+      this.play = false;
+      this.stopVid = false;
+    }
+  }
+
+
 
 }
