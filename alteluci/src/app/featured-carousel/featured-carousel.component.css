@@ -8,7 +8,7 @@
     */
 
     /* in this section: bad practice but slightly different vertical margins */
-    grid-template-columns: 10% 50px minmax(200px, 1fr) minmax(500px, 1fr) 150px 10%;
+    /* grid-template-columns: 10% 50px minmax(200px, 1fr) minmax(500px, 1fr) 150px 10%; */
     grid-template-rows: 5% 1fr 5fr 5%;
     overflow: visible;
 }
@@ -73,6 +73,7 @@
 
 .featured-underlay {
     font-size: 20px;
+    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: normal;
     margin: 0 auto;
@@ -149,9 +150,33 @@
 @media screen and (max-width: 1305px) {
 
     .vid-carousel-container {
-        width: 100vw !important;
+        width: 120vw !important;
         min-width: 1000px !important;
-        margin-left: 16vw;
+        margin-left: 5vw;
+    }
+
+    .not-active-slide {
+        height: 250px;
+    }
+
+    .featured-carousel-sec {
+        height: 895px;
+    }
+
+    .featured-underlay {
+        font-size: 1.5vw;
+    }
+    
+}
+
+@media screen and (max-width: 1080px) {
+
+    .featured-splash {
+        font-size: 48px;
+    }
+
+    .featured-opera-txt {
+        font-size: 38px;
     }
     
 }
@@ -173,12 +198,14 @@
     }
 
     .featured-splash {
-        width: 100%;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        margin-left: 0%;
+        margin-right: 0%;
     }
 
-    .featured-logo {
-        position: relative;
-        margin-left: 40%;
+    .featured-carousel-sec {
+        height: 825px;
     }
 
     .vid-carousel-container {
@@ -194,25 +221,12 @@
     }
 }
 
-@media screen and (max-width: 780px) {
-
-    .vid-carousel-container {
-        margin-left: 0vw;
-        transform: translateX(-70px);
-    }
-
-    .featured-splash {
-        font-size: 50px;
-    }
-    
-}
-
 @media screen and (max-width: 700px) {
 
     .featured-carousel-sec {
         grid-template-columns: minmax(10%, 1fr) 30px minmax(114px, 220px) minmax(114px, 220px) 30px minmax(10%, 1fr);
-        grid-template-rows: 5% 2fr 1fr 5%;
-        height: 800px;
+        grid-template-rows: 5% 365px 265px 5%;
+        height: 700px;
     }
 
     .featured-splash {
@@ -236,14 +250,27 @@
     }
 
     .vid-carousel-container {
-        margin-top: 0;
-        transform: translateX(-150px);
+        transform: translateX(-80px);
         height: 200px;
-        width: 200vw !important;
-        min-width: 10px !important;
+        width: 120vw !important;
+        min-width: 600px !important;
         /*
         margin-left: 10vw !important;
         */
     }
+
+    .carousel-button-container {
+        margin-top: 50px !important;
+    }
     
+}
+
+@media screen and (max-width: 520px) {
+
+    .vid-carousel-container {
+        transform: translateX(0px);
+        width: 100vw !important;
+        min-width: none;
+        margin-left: 10% !important;
+    }
 }

@@ -70,8 +70,8 @@ export class FeaturedCarouselComponent {
             '(max-width: 1305px)': {
               slides: {
                 origin: 'center',
-                spacing: 1,
-                perView: 1,
+                spacing: 20,
+                perView: 2,
               }
             },
             '(max-width: 1000px)': {
@@ -84,8 +84,15 @@ export class FeaturedCarouselComponent {
             '(max-width: 700px)': {
               slides: {
                 origin: 'center',
-                spacing: 2,
+                spacing: 20,
                 perView: 2,
+              }
+            },
+            '(max-width: 520px)': {
+              slides: {
+                origin: 'center',
+                spacing: 0,
+                perView: 1,
               }
             },
           },

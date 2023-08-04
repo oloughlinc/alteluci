@@ -54,8 +54,8 @@
     right: 0;
     height: 95vh;
     width: 55vw;
+    width: 1000px;
     /*width: calc(95vh * 1.2);*/
-    max-width: calc(95vh * 1.2);
 
     margin-top: 30vh;
 }
@@ -211,5 +211,15 @@
     .lat-text {
         font-size: 10px;
         letter-spacing: 14px;
+    }
+
+    .honey-img-container {
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+
+    .honey-honey-text-container {
+        grid-column-start: 2;
+        grid-column-end: 5;
     }
 }

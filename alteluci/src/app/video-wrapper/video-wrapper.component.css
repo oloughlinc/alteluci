@@ -17,6 +17,13 @@
     }
 }
 
+@media screen and (max-width: 1300px) {
+    .vid-player {
+        width: 605px;
+        height: 339px;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .vid-player {
         width: 500px;

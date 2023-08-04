@@ -14,7 +14,6 @@
 
 .process-texture {
     height: 100%;
-    max-height: 100%;
     width: max(1400px, 100vw);
 
     z-index: 999;
@@ -102,7 +101,7 @@
     }
 
     .process-text-label {
-        font-size: 24px;
+        font-size: 20px;
         padding-left: 0;
         text-align: center;
     }
@@ -112,6 +111,7 @@
     .process-sec {
         grid-template-rows: 8% 1fr 15%;
         grid-template-columns: 25px 1fr 1fr 25px;
+        height: 600px;
         min-height: 600px;
     }
     .process-flowers {
