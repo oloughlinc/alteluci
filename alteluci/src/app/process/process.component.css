@@ -7,7 +7,6 @@
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
-
     grid-template-rows: 50px 1fr 50px;
     transform: translateZ(-2px) !important
 }
@@ -15,7 +14,6 @@
 .process-texture {
     height: 100%;
     width: max(1400px, 100vw);
-
     z-index: 999;
     position: absolute;
     mix-blend-mode: normal;

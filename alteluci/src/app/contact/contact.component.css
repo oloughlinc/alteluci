@@ -1,12 +1,8 @@
 .contact-sec {
-
     height: 100vh;
     min-height: 900px;
-
     align-items: start;
-
     grid-template-rows: 15% 1fr 12%;
-
     background-color: rgb(250, 249, 245);
 }
 

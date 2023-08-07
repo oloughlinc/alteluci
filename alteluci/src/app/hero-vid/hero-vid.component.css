@@ -1,21 +1,3 @@
-.border {
-    position: absolute;
-    box-sizing: border-box;
-    height: 10%;
-    width:100%;
-    background-color: rgba(66, 53, 28, 1.0);
-    opacity: 1;
-    z-index:99;
-}
-
-.b-top {
-    top:0;
-}
-
-.b-bot {
-    bottom: 0;
-}
-
 .bg-vid-container {
     height: 100%;
     width: 100%;
@@ -35,15 +17,118 @@
     padding: 0;
 }
 
-.white-box {
-    grid-column-start: 3;
+.top-banner {
+    background-image: url('../../assets/images/beach.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: max(100vh, 200px);
+    min-height: 500px;
+    grid-template-rows: 25px 100px 1fr 25%;
+    
+
+    position: relative;
+    transform-style: flat;
+    transform: translateZ(0);
+    overflow: hidden;
+
+}
+
+.top-banner-splash {
+    grid-column-start: 1;
     grid-column-end: 5;
-    grid-row-start: 3;
-    width: 90%;
-    height: 90%;
+    grid-row-start: 4;  
+    transform: translateY(-100px);
+    font-family: 'Libre Caslon Text', serif;
+    color:white;
+    text-align: left;
+    
+}
+
+.top-banner-splash-text {
+    font-size: min(97px, 6vw);
+    letter-spacing: 5px; 
+    padding: 0px;
+    margin-bottom: 0px;
+    
+}
+
+.top-banner-splash-text-underlay {
+    padding: 0px;
+    padding-left: 15vw;
+    margin-top: 0px;
+    font-size: min(24px, 2vw);
+}
+
+@media screen and (max-width: 1000px) { 
+    .top-banner-splash-text {
+        font-size: 75px;
+    }
+    .top-banner {
+        height: 100vh;
+    }
+    .top-banner-splash {
+        grid-column-end: 5;
+    }
+    .top-banner-splash-text-underlay {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .top-banner-splash-text {
+        font-size: 35px;
+    }
+    .top-banner {
+        height: 100vh;
+        min-height: 100%;
+        grid-template-rows: 25px 50px 8fr 1fr;
+    }
+    .top-banner-splash {
+        grid-column-end: 5;
+    }
+    .top-banner-splash-text-underlay {
+        font-size: 12px !important;
+    }
+    .logo-img {
+        max-height: 35px;
+        max-width: 30px;
+    }
+    .menu {
+        margin-top: 0;
+    }
+    .menu-butt {
+        font-size: 12px !important;
+    }
+
+}
+
+/* menu not implemented now but possibly at a later date */
+.menu {
+    grid-column-start: 5;
+    grid-row-start: 2;
+    color: rgb(173, 149, 133);
+    color: white;
+    font-size: 20px;
+    text-align: right;
+    z-index: 999 !important;
     place-self: center;
-    border: 1px solid white;
-    opacity: 0.1;
+    padding-bottom: 50px;
+}
+
+.menu-butt {
+    background: none; 
+    border: none; 
+    color: rgb(173, 149, 133); 
+    color: white;
+    font-size: 18px;
+}
+
+.inline-letters {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
 }
 
 .logo {
@@ -69,131 +154,4 @@
 
     align-self: top;
     z-index: 5;
-}
-
-.top-banner {
-    background-image: url('../../assets/images/beach.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    height: max(100vh, 200px);
-    min-height: 500px;
-    /*grid-template-rows: 25px 100px 8fr 1fr;*/
-    grid-template-rows: 25px 100px 1fr 25%;
-    
-
-    position: relative;
-    transform-style: flat;
-    transform: translateZ(0);
-    overflow: hidden;
-
-}
-
-.top-banner-splash {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 4;  
-    transform: translateY(-100px);
-    
-    
-}
-
-.top-banner-splash-text {
-    text-align: left;
-    font-size:97px;
-    font-size: 6vw;
-    letter-spacing: 5px; 
-    color:white;
-    padding: 0px;
-    margin-bottom: 0px;
-    font-family: 'Libre Caslon Text', serif;
-}
-
-.top-banner-splash-text-underlay {
-    color:white;
-    padding: 0px;
-    padding-left: 200px;
-    margin-top: 0px;
-    font-family: 'Libre Caslon Text', serif;
-    font-size: 24px;
-    text-align: left; 
-}
-
-@media screen and (max-width: 1000px) { 
-    .top-banner-splash-text {
-        font-size: 75px;
-    }
-    .top-banner {
-        height: 100vh;
-    }
-    .top-banner-splash {
-        grid-column-end: 5;
-    }
-    .top-banner-splash-text-underlay {
-        font-size: 15px;
-        letter-spacing: 15px !important;
-        padding-left: 5px !important;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .top-banner-splash-text {
-        font-size: 35px;
-    }
-    .top-banner {
-        height: 100vh;
-        min-height: 100%;
-        grid-template-rows: 25px 50px 8fr 1fr;
-    }
-    .top-banner-splash {
-        grid-column-end: 5;
-    }
-    .top-banner-splash-text-underlay {
-        font-size: 10px !important;
-        letter-spacing: 8px !important;
-        padding-left: 2px !important;
-    }
-    .logo-img {
-        max-height: 35px;
-        max-width: 30px;
-    }
-    .menu {
-        margin-top: 0;
-    }
-    .menu-butt {
-        font-size: 12px !important;
-    }
-    .inline-letters {
-        min-width: 15px !important;
-    }
-}
-
-
-
-
-.menu {
-    grid-column-start: 5;
-    grid-row-start: 2;
-    color: rgb(173, 149, 133);
-    color: white;
-    font-size: 20px;
-    text-align: right;
-    z-index: 999 !important;
-    place-self: center;
-    padding-bottom: 50px;
-}
-
-.menu-butt {
-    background: none; 
-    border: none; 
-    color: rgb(173, 149, 133); 
-    color: white;
-    font-size: 18px;
-}
-
-.inline-letters {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
 }

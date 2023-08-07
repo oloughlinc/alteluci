@@ -3,14 +3,10 @@
 .honey-honey {
     background-color:rgba(66, 53, 28, 1.0);
     height:110vh; 
-
     min-height: 1200px;
-
     grid-template-rows: 75px 2fr 0.5fr 2.2fr 2fr 150px;
     position: relative;
     mix-blend-mode: multiply;
-    transform: translateZ(0);
-
 }
 
 .honey-texture {
@@ -30,7 +26,10 @@
     grid-column-end: 6;
     grid-row-start: 2;
     align-self: center;
-    
+    z-index: 99;
+    font-size: 18px;
+    letter-spacing: 0.2rem;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 .honey-hr {
@@ -38,14 +37,9 @@
     float: left;
 }
 
-.honey-text-text {
-    font-size: 18px;
-    letter-spacing: 0.2rem;
+.honey-text-pad {
     padding-bottom: 25px;
-    font-family: 'Fira Sans', sans-serif;
-
 }
-
 
 .honey-leaves {
     z-index: 11;
@@ -53,10 +47,7 @@
     mix-blend-mode: multiply;
     right: 0;
     height: 95vh;
-    width: 55vw;
     width: 1000px;
-    /*width: calc(95vh * 1.2);*/
-
     margin-top: 30vh;
 }
 
@@ -74,29 +65,17 @@
     grid-column-end: 6;
     grid-row-start: 4;
 
-    margin: auto;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-
+    margin: 0 auto;
     border: none;
 }
 
 .honey-img {
-    
     object-fit: cover;
     height: 340px;
     max-height: 100%;
-    /*width: 620px;*/
     width: 700px;
     max-width: 100%;
     align-self: center;
-}
-
-.honey-vid {
-    height: 500px;
-    width: 888px;
 }
 
 .honey-honey-text-container {
