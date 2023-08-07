@@ -153,19 +153,17 @@
     }
     .honey-honey { 
         height: 100vh;
-        min-height: 700px;
+        min-height: 800px;
         grid-template-rows: 50px 1fr 50px 2.2fr 2fr 50px;
         grid-template-columns: 1fr 2.4fr minmax(25px, 1.6fr) 4fr 1fr;
     }
     .honey-logo {
         visibility: hidden;
     }
-    .honey-text-text {
+    .honey-text {
         font-size: 12px;
         white-space: pre-wrap;
         padding-bottom: 15px;
-    }
-    .honey-text {
         color: white;
         grid-column-start: 2;
         grid-column-end: 5;
@@ -181,7 +179,7 @@
     }
     .honey-texture {
         height: 100vh;
-        min-height: 700px;
+        min-height: 800px;
     }
     .rotate {
         transform: rotate(-90deg) translateX(-80%) translateY(-97%);

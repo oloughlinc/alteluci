@@ -247,6 +247,10 @@
         min-width: 600px !important;
     }
 
+    .carousel-button-container {
+        transform: translateY(25px);
+    }
+
     .carousel-button-container button { 
         font-size: 40px;
     }
